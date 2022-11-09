@@ -27,11 +27,11 @@
 ## level 2:  
 - [Types of data structures (2-3 name)](https://habr.com/ru/post/497476/)
 ## level 3:  
-- [Algorithm definition];
-- [Basic Data Structures];
+- [Algorithm definition](https://foxford.ru/wiki/informatika/opredelenie-algoritma) - это последовательность действий для исполнителя, записанная на формальном языке и приводящая к заданной цели за конечное время;
+- [Basic Data Structures](https://habr.com/ru/post/497476/);
 ## level 4:  
-- [What is Big O notation]
-- [Why do we need it]
+- [What is Big O notation](https://habr.com/ru/post/444594/)
+- [Why do we need it](https://proglib.io/p/big-o-notaciya-chto-eto-takoe-i-pochemu-ee-obyazatelno-nuzhno-znat-kazhdomu-programmistu-2022-02-17)
 # Common (functions, hoisting, work with Objects, etc) (required level 4)
 ## level 1:  
 - [Loops while, for];
