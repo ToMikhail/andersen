@@ -3,7 +3,7 @@
 - [Naming of variables, functions and classes](https://learn.javascript.ru/variables);  
 - [Re-using code]();
 ## level 2:  
-- [dry, kiss, yagni](https://habr.com/ru/company/itelma/blog/546372/) 
+- [dry, kiss, yagni](https://habr.com/ru/company/itelma/blog/546372/) (https://webformyself.com/tri-klyuchevyx-principa-xoroshego-koda-dry-kiss-yagni/)
 ## level 3 (required ):
 - [clean code from Martin - base principles;](https://habr.com/ru/post/485118/)
 - [code review - for what we need it, how does it work;](https://habr.com/ru/post/581354/)
@@ -39,16 +39,16 @@
 - [If condition](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else); 
 - [Switch construction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch); 
 - [Logical operators](https://learn.javascript.ru/logical-operators);
-- [Conditional operators]; 
-- [Alert/prompt/confirm]; 
-- [let/const vs var];
+- [Conditional operators](https://learn.javascript.ru/logical-operators); 
+- [Alert/prompt/confirm](https://javascript.info/alert-prompt-confirm); 
+- [let/const vs var](https://learn.javascript.ru/variables);
 ## level 2:  
-- [Types of functions and their differences, hoisting function declaration]
-- [Destructing assigments, spread operator;]
+- [Types of functions and their differences, hoisting function declaration](https://javascript.info/function-basics)(https://learn.javascript.ru/function-expressions)
+- [Destructing assignments, spread operator;]
 - [Optional mark. Object properties optional chain;]
 - [Work with array (map, filter, reduce, find, includes, some etc.)]
 ## level 3:  
-- [Strict vs none-strict comparison;] 
+- [Strict vs none-strict comparison;](https://javascript.info/strict-mode) 
 - [Hoisting;]
 - [Template string;]
 - [Arrow functions vs plain functions;]
