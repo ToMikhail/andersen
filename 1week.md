@@ -1,7 +1,7 @@
 # 1. Common principles (required level 3)  
 ## level 1:   
-- Naming of variables, functions and classes;  
-- Re-using code;
+- [Naming of variables, functions and classes](https://learn.javascript.ru/variables);  
+- [Re-using code]();
 ## level 2:  
 - dry, kiss, yagni, 
 ## level 3 (required ):
