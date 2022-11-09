@@ -44,15 +44,15 @@
 - [let/const vs var](https://learn.javascript.ru/variables);
 ## level 2:  
 - [Types of functions and their differences, hoisting function declaration](https://javascript.info/function-basics)(https://learn.javascript.ru/function-expressions)
-- [Destructing assignments, spread operator;]
-- [Optional mark. Object properties optional chain;]
-- [Work with array (map, filter, reduce, find, includes, some etc.)]
+- [Destructing assignments, spread operator;](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Optional mark. Object properties optional chain;](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+  - Work with array ([map](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [filter](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [reduce](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce), [find], [includes](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), some etc.)]
 ## level 3:  
 - [Strict vs none-strict comparison;](https://javascript.info/strict-mode) 
-- [Hoisting;]
-- [Template string;]
-- [Arrow functions vs plain functions;]
-- [What is Temporary Dead Zone?]
+- [Hoisting;](https://medium.com/@stasonmars/%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%D0%BC-hoisting-%D0%B2-javascript-7d2d27bc51f1)
+- [Template string;](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Template_literals)
+- [Arrow functions vs plain functions;](https://learn.javascript.ru/arrow-functions)
+- [What is Temporary Dead Zone?](https://dmenshikov.com/2017-07-13-temporal-dead-zone/)
 ## level 4:  
 - [Usage of "var". How does variable behave without "var"?]
 - [What is garbage collector? Why do we need it?]
