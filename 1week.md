@@ -34,10 +34,11 @@
 - [Why do we need it](https://proglib.io/p/big-o-notaciya-chto-eto-takoe-i-pochemu-ee-obyazatelno-nuzhno-znat-kazhdomu-programmistu-2022-02-17)
 # Common (functions, hoisting, work with Objects, etc) (required level 4)
 ## level 1:  
-- [Loops while, for];
-- [If condition]; 
-- [Switch construction]; 
-- [Logical operators];
+- [Loops while](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while);
+- [Loops for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [If condition](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else); 
+- [Switch construction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch); 
+- [Logical operators](https://learn.javascript.ru/logical-operators);
 - [Conditional operators]; 
 - [Alert/prompt/confirm]; 
 - [let/const vs var];
