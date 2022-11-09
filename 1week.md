@@ -14,12 +14,12 @@
 ## level 1:  
 - Fundamental concepts of group work and version control
 ## level 2:  
-- basic operations
-- gitflow
+- [basic operations](https://vk.com/@vladilen.minin-git-and-github)
+- [gitflow](https://www.atlassian.com/ru/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=Git%2Dflow%20%E2%80%94%20%D0%B0%D0%BB%D1%8C%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C%20%D0%B2%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F,%D0%92%D0%B8%D0%BD%D1%81%D0%B5%D0%BD%D1%82%D0%BE%D0%BC%20%D0%94%D1%80%D0%B8%D1%81%D1%81%D0%B5%D0%BD%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20nvie.)
 ## level 3:  
 - branching, tagging, merging changes from specific branch
 ## level 4:  
-- blaming (annotate); 
+- [blaming (annotate);](https://www.atlassian.com/ru/git/tutorials/inspecting-a-repository/git-blame#:~:text=%D0%9E%D0%B1%D1%89%D0%B5%D0%B5%20%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20git%20blame%20%E2%80%94%20%D0%BE%D1%82%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5,%D0%B2%D0%BD%D0%B5%D1%81%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B8%D0%B5%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B2%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D1%83.) 
 - resetting vs reverting changes;
 # Data structures (required level 3)
 ## level 1:  
