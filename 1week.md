@@ -3,13 +3,13 @@
 - [Naming of variables, functions and classes](https://learn.javascript.ru/variables);  
 - [Re-using code]();
 ## level 2:  
-- dry, kiss, yagni, 
+- [dry, kiss, yagni](https://habr.com/ru/company/itelma/blog/546372/) 
 ## level 3 (required ):
-- clean code from Martin - base principles;
-- code review - for what we need it, how does it work;
+- [clean code from Martin - base principles;](https://habr.com/ru/post/485118/)
+- [code review - for what we need it, how does it work;](https://habr.com/ru/post/581354/)
 ## level 4:  
-- clean code - good understanding of necessary of comments, etc
-- Antipatterns.  
+- [clean code - good understanding of necessary of comments, etc](https://webdevblog.ru/ne-kommentirujte-svoj-kod/)
+- [Antipatterns](https://javarush.ru/groups/posts/2622-chto-takoe-antipatternih-razbiraem-primerih-chastjh-1).  
 # Git (required level 3)
 ## level 1:  
 - Fundamental concepts of group work and version control
