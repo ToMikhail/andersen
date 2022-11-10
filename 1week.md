@@ -60,16 +60,16 @@
 - [Flat](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat), [flatMap](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap), [includes](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), [Array.from() methods](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from);
 # Data types (required level 3)
 ## level 1:  
-- [Be able to enumerate data types]
-- [Know the differences between primitives and reference types]
+- [Be able to enumerate data types](https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures#%D1%82%D0%B8%D0%BF%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
+- Know the differences between primitives and reference types - переменные типа значений содержат свои данные непосредственно. Две переменные ссылочного типа могут ссылаться на один и тот же объект, поэтому операции над одной переменной могут затрагивать объект, на который ссылается другая переменная
 ## level 2:  
-- [understand what Boxing / unboxing is and why it is needed]
+- [understand what Boxing / unboxing is and why it is needed](https://ru.hexlet.io/courses/js-introduction-to-oop/lessons/boxing/theory_unit)
 ## level 3:  
-- [With hints to be able to solve problems on type casting]
-- [Type conversion;]
-- ["typeof" usage]
+- With hints to be able to solve problems on type casting
+- Type conversion;
+- ["typeof" usage](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/typeof)
 ## level 4:  
-- [Solve type conversion problems on your own]
+- Solve type conversion problems on your own
 # Inheritance (required level 4)
 ## level 1:  
 - [What is prototypal inheritance;]
