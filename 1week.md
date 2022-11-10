@@ -54,10 +54,10 @@
 - [Arrow functions vs plain functions;](https://learn.javascript.ru/arrow-functions)
 - [What is Temporary Dead Zone?](https://dmenshikov.com/2017-07-13-temporal-dead-zone/)
 ## level 4:  
-- [Usage of "var". How does variable behave without "var"?]
-- [What is garbage collector? Why do we need it?]
-- [Keys, values, fromEntries, entries methods;]
-- [Flat, flatMap, includes, Array.from() methods;]
+- [Usage of "var". How does variable behave without "var"?]- переменная превращается в глобальную, если не выбран строгий режим ("use strict")
+- [What is garbage collector? Why do we need it?](https://learn.javascript.ru/garbage-collection)
+- [Keys, values, fromEntries, entries methods;](https://learn.javascript.ru/keys-values-entries), (https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
+- [Flat](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat), [flatMap](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap), [includes](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), [Array.from() methods](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from);
 # Data types (required level 3)
 ## level 1:  
 - [Be able to enumerate data types]
