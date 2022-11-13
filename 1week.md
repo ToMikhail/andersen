@@ -86,42 +86,44 @@
 - [Solves problems with tips]
 - [get and set object prototype;](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
 ## level 4:  
-- [Where is the prototype link stored]
+- [Where is the prototype link stored](https://habr.com/ru/post/518360/) - отведен приватный слот [[Prototype]] содержащий ссылку на объект-прототип (либо null, если прототипа нет).
 - [How to create an unaccessible object]
 - [Methods from Object.prototype](https://learn.javascript.ru/prototype-methods)
 - [Solves problems with minimal prompts, answers questions well enough]
 # 7. Closure (required level 3)
 ## level 1:  
-- [Be able to explain what a closure is]
+- [Be able to explain what a closure is](https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures) - Замыкание — это комбинация функции и лексического окружения, в котором эта функция была определена. Другими словами, замыкание даёт вам доступ к Scope (en-US) внешней функции из внутренней функции. В JavaScript замыкания создаются каждый раз при создании функции, во время её создания
 ## level 2:  
 - [Understand what problems a closure solves]
 ## level 3:  
-- [Understand what problems a closure can cause]
+- [Understand what problems a closure can cause](https://learn.javascript.ru/closure) - Замыкание – это функция, которая запоминает свои внешние переменные и может получить к ним доступ. В некоторых языках это невозможно, или функция должна быть написана специальным образом, чтобы получилось замыкание. Но, как было описано выше, в JavaScript, все функции изначально являются замыканиями (есть только одно исключение, про которое будет рассказано в Синтаксис "new Function").
+То есть они автоматически запоминают, где были созданы, с помощью скрытого свойства [[Environment]], и все они могут получить доступ к внешним переменным.
+Когда на собеседовании фронтенд-разработчик получает вопрос: «что такое замыкание?», – правильным ответом будет определение замыкания и объяснения того факта, что все функции в JavaScript являются замыканиями, и, может быть, несколько слов о технических деталях: свойстве [[Environment]] и о том, как работает лексическое окружение.
 - [Be able to write an example of closure / solve a problem with prompts]
 ## level 4:  
 - [Be able to write an example closure / solve a problem without prompts]
 # 8. Context (required level 3)
 ## level 1:  
-- [What is context]
-- [What is the global context]
+- [What is context](https://habr.com/ru/company/ruvds/blog/422089/) - Контекст выполнения (execution context) — это, если говорить упрощённо, концепция, описывающая окружение, в котором производится выполнение кода на JavaScript. Код всегда выполняется внутри некоего контекста. (3 типа контекста(глобальный, контекст выполнения функци, контекст выполнения функции eval))
+- [What is the global context](https://learn.javascript.ru/global-object) - Глобальный контекст выполнения. Это базовый, используемый по умолчанию контекст выполнения. Если некий код находится не внутри какой-нибудь функции, значит этот код принадлежит глобальному контексту. Глобальный контекст характеризуется наличием глобального объекта, которым, в случае с браузером, является объект window, и тем, что ключевое слово this указывает на этот глобальный объект. В программе может быть лишь один глобальный контекст.
 ## level 2:  
-- [How is context defined at runtime?]
+- [How is context defined at runtime?](https://habr.com/ru/company/ruvds/blog/422089/)
 ## level 3:  
-- [How to bind context, is it possible to bind it twice]
-- [When context is lost]
+- [How to bind context, is it possible to bind it twice](https://learn.javascript.ru/call-apply-decorators) - [bind](https://learn.javascript.ru/bind)
+- [When context is lost] - когда функция в функции , происходит потеря контекста. (присвоиьт внути this, bind)
 - [Solves contextual problems with prompts]
 ## level 4:  
 - [Solves contextual problems with minimal prompts]
 # 9. Classes (required level 3)
 ## level 1:  
-- [Basic syntax;]
+- [Basic syntax;](https://learn.javascript.ru/class#sintaksis-class)
 ## level 2:  
-- [Inheritance;]
+- [Inheritance;](https://learn.javascript.ru/class-inheritance)
 ## level 3:  
-- [Private and protected properties and methods;]
+- [Private and protected properties and methods;](https://learn.javascript.ru/private-protected-properties-methods)
 ## level 4:  
-- ["instanceof" usage;] 
-- [Static properties and methods;]
+- ["instanceof" usage;](https://javascript.info/instanceof) 
+- [Static properties and methods;](https://javascript.info/static-properties-methods)
 # Asynchronous programming (required level 4)
 ## level 1:  
 - [Blocking code;]
