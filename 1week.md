@@ -80,9 +80,9 @@
 - [Chain of prototypes;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#inheritance_with_the_prototype_chain)
 - [create object with prototype;](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 ## level 3:  
-- Knows the difference proto vs prototype - __proto__ - это атрибут, который есть у каждого объекта, а prototype - это атрибут, который есть только у функций !!!
+- Knows the difference proto vs prototype - __proto__ - это атрибут, который есть у каждого объекта, а prototype - это атрибут, который есть только у функций(класса)!!!
 Используйте Object.getPrototypeOf () вместо __proto __ !!!
-- [Difference between prototypal and functional inheritance](https://medium.com/devschacht/eric-elliott-common-misconceptions-about-inheritance-in-javascript-f6137fc3a45a)
+- [Difference between prototypal and functional inheritance](https://medium.com/devschacht/eric-elliott-common-misconceptions-about-inheritance-in-javascript-f6137fc3a45a) - [functioanl inheritance](https://learn.javascript.ru/functional-inheritance)
 - [Solves problems with tips]
 - [get and set object prototype;](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
 ## level 4:  
