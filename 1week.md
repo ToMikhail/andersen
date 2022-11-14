@@ -137,17 +137,17 @@
 - [Macro and micro tasks (basic understanding);]
 # Methods of Object, Array, Function.prototype (required level 4)
 ## level 1:  
-- [Object.keys]
-- [Object.values]
-- [for/in]
+- [Object.keys](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+- [Object.values](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+- [for/in](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...in)
 ## level 2:  
-- [map vs forEach]
+- [map vs forEach](https://medium.com/@zestful_satin_grasshopper_759/javascript-map-%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2-foreach-f2a258564d02#:~:text=forEach()%20%E2%80%94%20%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D1%8F%D0%B5%D1%82%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%83%D1%8E%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8E,%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%B3%D0%BE%20%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%20%D0%B2%20%D0%B2%D1%8B%D0%B7%D1%8B%D0%B2%D0%B0%D1%8E%D1%89%D0%B5%D0%BC%20%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%B5.)
 ## level 3:  
 - [find, filter, some, includes]
 ## level 4:  
-- [reduce;]
-- [clone object;]
-- [sort.]
+- [reduce;](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+- [clone object;](https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/)
+- [sort.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 # Promise, async/await (required level 3)
 ## level 1:  
 - -
