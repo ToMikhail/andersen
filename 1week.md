@@ -1,4 +1,4 @@
-[be back](https://github.com/ToMikhail/andersen/edit/main/readme.md)
+[be back](https://github.com/ToMikhail/andersen)
 # 1. Common principles (required level 3)  
 ## level 1:   
 - [Naming of variables, functions and classes](https://learn.javascript.ru/variables);  
