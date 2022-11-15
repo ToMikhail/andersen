@@ -111,7 +111,7 @@
 - [How is context defined at runtime?](https://habr.com/ru/company/ruvds/blog/422089/)
 ## level 3:  
 - [How to bind context, is it possible to bind it twice](https://learn.javascript.ru/call-apply-decorators) - [bind](https://learn.javascript.ru/bind)
-- [When context is lost] - когда функция в функции , происходит потеря контекста. (присвоиьт внути this, bind)
+- [When context is lost](https://habr.com/ru/post/421959/) - когда функция в функции , происходит потеря контекста. (присвоиьт внути this, bind)
 - [Solves contextual problems with prompts]
 ## level 4:  
 - [Solves contextual problems with minimal prompts]
