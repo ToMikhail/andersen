@@ -14,10 +14,11 @@
 - ["instanceof" usage;](https://javascript.info/instanceof) 
 - [Static properties and methods;](https://javascript.info/static-properties-methods)
 
-# 10. [Asynchronous programming (required level 4)](https://developer.mozilla.org/ru/docs/Learn/JavaScript/Asynchronous)
+# 10. Asynchronous programming (required level 4)
 ## level 1:  
 - [Blocking code;](https://learn.javascript.ru/event-loop)
   - (https://developer.mozilla.org/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
+  - (https://developer.mozilla.org/ru/docs/Learn/JavaScript/Asynchronous)
   - [video](https://www.youtube.com/watch?v=vIZs5tH-HGQ)
 ## level 2:  
 - [Event loop concept;](https://learn.javascript.ru/event-loop)
