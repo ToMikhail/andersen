@@ -4,7 +4,7 @@
 - [Basic syntax;](https://learn.javascript.ru/class#sintaksis-class) 
   - (https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes)
   - (https://habr.com/ru/post/518386/)
-  - [video](https://www.youtube.com/watch?v=uLY9GXGMXaA)
+  - [video.Минин](https://www.youtube.com/watch?v=uLY9GXGMXaA)
 ## level 2:  
 - [Inheritance;](https://learn.javascript.ru/class-inheritance)
   - [video](https://www.youtube.com/watch?v=v6AVfIupNB8)
