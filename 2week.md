@@ -19,9 +19,9 @@
 - [Blocking code;](https://learn.javascript.ru/event-loop)
   - (https://developer.mozilla.org/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
   - (https://developer.mozilla.org/ru/docs/Learn/JavaScript/Asynchronous)
-  - [video](https://www.youtube.com/watch?v=vIZs5tH-HGQ)
 ## level 2:  
 - [Event loop concept;](https://learn.javascript.ru/event-loop)
+  - [Video.Event Loop. JS SetTimeout 0](https://www.youtube.com/watch?v=vIZs5tH-HGQ)
 - [setTimeout](https://developer.mozilla.org/ru/docs/Web/API/setTimeout), [setInterval](https://developer.mozilla.org/ru/docs/Web/API/setInterval). [Why do we need them?](https://learn.javascript.ru/settimeout-setinterval)
 - [Clear timeouts and intervals;](https://developer.mozilla.org/ru/docs/Web/API/clearTimeout) - (https://www.youtube.com/watch?v=vIZs5tH-HGQ)
 ## level 3:  
