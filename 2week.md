@@ -34,6 +34,8 @@
 - -
 ## level 2:  
 - [Promises vs callbacks;](https://qna.habr.com/q/468150)
+  - [video.Minin.promise](https://www.youtube.com/watch?v=1idOY3C1gYU)
+  - [video.Minin.async/await](https://www.youtube.com/watch?v=SHiUyM_fFME&t=22s)
 - [Examples of async functions;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 ## level 3:  
 - [States of promises;] 
@@ -64,6 +66,7 @@
 - [what is status codes;](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
 - [what is AJAX;](https://developer.mozilla.org/ru/docs/Web/Guide/AJAX) - [fetch(video)](https://www.youtube.com/watch?v=eKCD9djJQKc)
 - [what is JSON;](https://habr.com/ru/post/554274/)
+  - [video.Minin.serverRequests](https://www.youtube.com/watch?v=eKCD9djJQKc)
 ## level 2:  
 - [Basic usage of XHR (how to make simple request and handle answer);
 response code groups](https://learn.javascript.ru/xmlhttprequest) - (https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest)
