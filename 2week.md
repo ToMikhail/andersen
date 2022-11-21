@@ -102,6 +102,7 @@
 - -
 ## level 3:  
 - [Ways to get DOM elements in JS;](https://learn.javascript.ru/searching-elements-dom)
+  - [video](https://monsterlessons.com/project/lessons/chto-takoe-dom-derevo)
 ## level 4:  
 - [Selectors;](см выше) 
 
