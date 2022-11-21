@@ -61,16 +61,6 @@
 - [exceptions throwing](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/throw) 
 
 
-# 13. Request parameters and JSON (required level 2)
-## level 1:  
-- [Clone objects with JSON methods;](https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/)
-## level 2:  
-- [How to add request body]()(https://ru.hexlet.io/courses/http_protocol/lessons/body/theory_unit)
-## level 3:  
-- [How to send requests with different content types and what is it for]()
-## level 4:  
-- [Read the response that came from the back-end and process it (how to save the file, how to filter out unnecessary data before using it in the target function);]() 
-
 # 14. Garbage collector (required level x)
 ## level 1:  
 - -
@@ -81,7 +71,6 @@
 ## level 4:  
 - [What is garbage collector?](https://learn.javascript.ru/garbage-collection)
 - [Why do we need it?](https://learn.javascript.ru/garbage-collection)
-
 
 
 # 15. DOM (required level 3)
@@ -106,3 +95,12 @@
 ## level 4:  
 - [Selectors;](см выше) 
 
+# 17. LocalStorage, SessionStorage (required level 3)
+## level 1:  
+- [Storages purpose;](https://learn.javascript.ru/localstorage)
+## level 2:  
+- [Local vs session storages](https://www.whitelabeldevelopers.ru/articles/raznicza-mezhdu-localstorage-i-sessionstorage)
+## level 3:  
+- [Setting, getting, clearing of values;](https://learn.javascript.ru/localstorage#dostup-kak-k-obychnomu-obektu)
+## level 4:  
+- [Storage events;](https://learn.javascript.ru/localstorage#sobytie-storage) 
