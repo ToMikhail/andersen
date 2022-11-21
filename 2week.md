@@ -95,4 +95,13 @@
 - [DOM inspecting (live DOM viewer);](https://developer.chrome.com/docs/devtools/dom/properties/) 
   - http://software.hixie.ch/utilities/js/live-dom-viewer/
 
+# 16. Search methods (DOM) (required level 3)
+## level 1:  
+- -
+## level 2:  
+- -
+## level 3:  
+- [Ways to get DOM elements in JS;](https://learn.javascript.ru/searching-elements-dom)
+## level 4:  
+- [Selectors;](см выше) 
 
