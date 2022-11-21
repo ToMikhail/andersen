@@ -31,3 +31,13 @@ response code groups](https://learn.javascript.ru/xmlhttprequest) - (https://dev
 - Work with json responce;(https://developer.mozilla.org/en-US/docs/Web/API/Response/json)
 - Set headers in request;(https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest/setRequestHeader)
 - How to get around CORS;() - ???????????
+
+# 18. Request parameters and JSON (required level 2)
+## level 1:  
+- [Clone objects with JSON methods;](https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/)
+## level 2:  
+- [How to add request body]()(https://ru.hexlet.io/courses/http_protocol/lessons/body/theory_unit)
+## level 3:  
+- [How to send requests with different content types and what is it for]()
+## level 4:  
+- [Read the response that came from the back-end and process it (how to save the file, how to filter out unnecessary data before using it in the target function);]() 
