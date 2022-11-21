@@ -100,28 +100,19 @@ response code groups](https://learn.javascript.ru/xmlhttprequest) - (https://dev
 ## level 3:  
 - -
 ## level 4:  
-- [What is garbage collector?]()
-- [Why do we need it?]()
+- [What is garbage collector?](https://learn.javascript.ru/garbage-collection)
+- [Why do we need it?](https://learn.javascript.ru/garbage-collection)
 
-# 16. Regular Expressions, RegExp (required level x)
-## level 1:  
-- [What is RegExp]()
-- [How to use RegExp]()
-## level 2:  
-- [Two methods of RegExp object;]()
-## level 3:  
-- [Two ways to create RegExp;]()
-## level 4:  
-- [Basic RegExp pattern (character classes);]()
 
-# 17. DOM (required level 3)
+
+# 16. DOM (required level 3)
 ## level 1:  
 - -
 ## level 2:  
-- [- What is the DOM?]()
+- [What is the DOM?](https://learn.javascript.ru/dom-nodes)
 ## level 3:  
-- [What is DOM tree?]()
+- [What is DOM tree?](см выше)
 ## level 4:  
-- [DOM inspecting (live DOM viewer);]() 
+- [DOM inspecting (live DOM viewer);](https://developer.chrome.com/docs/devtools/dom/properties/) 
 
 
