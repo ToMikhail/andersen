@@ -93,5 +93,6 @@
 - [What is DOM tree?](см выше)
 ## level 4:  
 - [DOM inspecting (live DOM viewer);](https://developer.chrome.com/docs/devtools/dom/properties/) 
+  - http://software.hixie.ch/utilities/js/live-dom-viewer/
 
 
