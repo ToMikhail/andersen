@@ -41,3 +41,14 @@ response code groups](https://learn.javascript.ru/xmlhttprequest) - (https://dev
 - [How to send requests with different content types and what is it for]()
 ## level 4:  
 - [Read the response that came from the back-end and process it (how to save the file, how to filter out unnecessary data before using it in the target function);]() 
+
+# 19. Cookie (required level 3)
+## level 1:  
+- -
+## level 2:  
+- -
+## level 3:  
+- [What is cookie;](https://learn.javascript.ru/cookie#chtenie-iz-document-cookie)
+## level 4:  
+- [Setting and getting of cookies;](https://learn.javascript.ru/cookie#chtenie-iz-document-cookie)
+- Age of cookie;](https://learn.javascript.ru/cookie#expires-max-age) 
