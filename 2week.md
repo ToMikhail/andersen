@@ -104,17 +104,3 @@
 - [Setting, getting, clearing of values;](https://learn.javascript.ru/localstorage#dostup-kak-k-obychnomu-obektu)
 ## level 4:  
 - [Storage events;](https://learn.javascript.ru/localstorage#sobytie-storage) 
-
-# 17. Cookie (required level 3)
-## level 1:  
-- -
-## level 2:  
-- -
-## level 3:  
-- [What is cookie;](https://learn.javascript.ru/cookie#chtenie-iz-document-cookie)
-## level 4:  
-- [Setting and getting of cookies;](https://learn.javascript.ru/cookie#chtenie-iz-document-cookie)
-- Age of cookie;](https://learn.javascript.ru/cookie#expires-max-age) 
-
-
-
