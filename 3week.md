@@ -15,7 +15,8 @@
 - [what is https;](https://developer.mozilla.org/ru/docs/Glossary/https)
 - [what is status codes;](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
 - [what is AJAX;](https://developer.mozilla.org/ru/docs/Web/Guide/AJAX)
-- [what is JSON;]([https://habr.com/ru/post/554274/](https://tproger.ru/articles/chto-takoe-json-vvedenie/)
+- [what is JSON;](https://habr.com/ru/post/554274/)
+  - (https://tproger.ru/articles/chto-takoe-json-vvedenie/)
 ## level 2:  
 - [Basic usage of XHR, how to make simple request and handle answer) response code groups](https://learn.javascript.ru/xmlhttprequest) 
   - (https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest)
