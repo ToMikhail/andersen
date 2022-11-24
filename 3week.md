@@ -22,7 +22,7 @@
   - (https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest)
   - [video.Minin.serverRequests](https://www.youtube.com/watch?v=eKCD9djJQKc)
 - [Basic usage of fetch() (how to make simple request and handle answer);](https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch)
-  - (https://learn.javascript.ru/fetch-api)
+  - (https://learn.javascript.ru/fetch)
   - [fetch(video)](https://www.youtube.com/watch?v=eKCD9djJQKc)
 ## level 3:  
 - CRUD HTTP methods;(https://proglib.io/p/chto-takoe-api-i-crud-prostymi-slovami)
