@@ -17,8 +17,7 @@
 - [what is AJAX;](https://developer.mozilla.org/ru/docs/Web/Guide/AJAX)
 - [what is JSON;]([https://habr.com/ru/post/554274/](https://tproger.ru/articles/chto-takoe-json-vvedenie/)
 ## level 2:  
-- [Basic usage of XHR (how to make simple request and handle answer);
-response code groups](https://learn.javascript.ru/xmlhttprequest) 
+- [Basic usage of XHR, how to make simple request and handle answer) response code groups](https://learn.javascript.ru/xmlhttprequest) 
   - (https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest)
   - [video.Minin.serverRequests](https://www.youtube.com/watch?v=eKCD9djJQKc)
 - [Basic usage of fetch() (how to make simple request and handle answer);](https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch)
