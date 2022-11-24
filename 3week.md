@@ -15,7 +15,7 @@
 - [what is https;](https://developer.mozilla.org/ru/docs/Glossary/https)
 - [what is status codes;](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
 - [what is AJAX;](https://developer.mozilla.org/ru/docs/Web/Guide/AJAX) - [fetch(video)](https://www.youtube.com/watch?v=eKCD9djJQKc)
-- [what is JSON;](https://habr.com/ru/post/554274/)
+- [what is JSON;]([https://habr.com/ru/post/554274/](https://tproger.ru/articles/chto-takoe-json-vvedenie/)
   - [video.Minin.serverRequests](https://www.youtube.com/watch?v=eKCD9djJQKc)
 ## level 2:  
 - [Basic usage of XHR (how to make simple request and handle answer);
