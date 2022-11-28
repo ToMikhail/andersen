@@ -34,7 +34,9 @@
 - Why do we need metodology in our team;
 - definition of agile;
 ## level 2:  
-- Definition of scrum and kanban. Base concept;
+- Definition of scrum and kanban. Base concept;  
+  - SCRUM -  это набор правил для организации гибкого рабочего процесса, который заключается в командном подходе, работе итерациями, фокусировке на цели каждой итерации и нестандартном распределении обязанностей внутри коллектива.
+  - Kanban — Методика предполагает обсуждение производительности в режиме реального времени и полную прозрачность рабочих процессов. Рабочие задачи визуально представлены на доске Kanban, что позволяет участникам команды видеть состояние каждой задачи в любой момент времени.
 - Understanding of the purpose of using Jira systems;
 ## level 3:  
 - Understanding of primary SDLC models; 
