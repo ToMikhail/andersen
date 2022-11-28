@@ -42,7 +42,7 @@
 - Understanding of primary SDLC models; 
 - Applying principals of selected SDLC model in practice;
 ## level 4:  
-- agile vs scrum/kanban;
+- agile vs scrum/kanban; - Если фреймворк Scrum сразу определяет рамки процесса, то канбан-метод встраивается в любой существующий и позволяет начать с того, что есть сейчас, постепенно его улучшая.
 - providing estimates of efforts required for implementing the tasks;
 
 # 19. Browser. Events (required level 3)
