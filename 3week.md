@@ -1,6 +1,6 @@
 [be back](https://github.com/ToMikhail/andersen)
 
-# 17. Work with backend (required level 4)
+# 18. Work with backend (required level 4)
 ## level 1:  
 - [what is https;](https://developer.mozilla.org/ru/docs/Glossary/https)
 - [what is status codes;](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
@@ -29,7 +29,7 @@
 - Set headers in request;(https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest/setRequestHeader)
 - How to get around CORS;() - https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
 
-# 18. Development methodologies (agile and beyond) (required level 2)
+# 19. Development methodologies (agile and beyond) (required level 2)
 ## level 1:  
 - Why do we need metodology in our team;
 - definition of agile;
@@ -57,7 +57,7 @@
 - agile vs scrum/kanban; - Если фреймворк Scrum сразу определяет рамки процесса, то канбан-метод встраивается в любой существующий и позволяет начать с того, что есть сейчас, постепенно его улучшая.
 - providing estimates of efforts required for implementing the tasks;
 
-# 19. Browser. Events (required level 3)
+# 20. Browser. Events (required level 3)
 ## level 1:  
 - DOM events;
    -https://learn.javascript.ru/introduction-browser-events
@@ -81,7 +81,7 @@
   - https://learn.javascript.ru/event-delegation
 
 
-# 20. Cookie (required level 3)
+# 21. Cookie (required level 3)
 ## level 1:  
 - -
 ## level 2:  
@@ -93,7 +93,7 @@
 - Age of cookie;](https://learn.javascript.ru/cookie#expires-max-age) 
 
 
-# 21. HTML. Semantic, Critical Rendering path, block/inline elements (required level 3)
+# 22. HTML. Semantic, Critical Rendering path, block/inline elements (required level 3)
 ## level 1:  
 - Basic scheme for HTML document;
   - https://ru.hexlet.io/courses/layout-designer-basics/lessons/page-structure/theory_unit
@@ -144,7 +144,7 @@
   - отрисовка.
 
 
-# 22. CSS. Selector types, Selector weight, styles that are inherited (required level 3)
+# 23. CSS. Selector types, Selector weight, styles that are inherited (required level 3)
 ## level 1:  
 - Frameworks layout technique; - https://jazzteam.ru/technical-articles/overview-of-approaches-and-css-frameworks-for-adaptive-web-page-layout/
   - Фиксированная верстка (Fixed Layout)
@@ -176,14 +176,3 @@
 - Flexbox layout technique; - https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 - Responsive design (concept understanding);
 - CSS Box Model - https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox
-
-
-# XX. Nam (required level x)
-## level 1:  
-
-## level 2:  
-
-## level 3:  
-
-## level 4:  
-
