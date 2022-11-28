@@ -27,7 +27,7 @@
 - What is CORS and why we need it;(https://habr.com/ru/company/macloud/blog/553826/)
 - Work with json responce;(https://developer.mozilla.org/en-US/docs/Web/API/Response/json)
 - Set headers in request;(https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest/setRequestHeader)
-- How to get around CORS;() - ???????????
+- How to get around CORS;() - https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
 
 # 18. Development methodologies (agile and beyond) (required level 2)
 ## level 1:  
