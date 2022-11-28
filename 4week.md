@@ -19,3 +19,13 @@
 - [How to send requests with different content types and what is it for]()
 ## level 4:  
 - [Read the response that came from the back-end and process it (how to save the file, how to filter out unnecessary data before using it in the target function);]() 
+
+
+# XX. Nam (required level x)
+## level 1:  
+
+## level 2:  
+
+## level 3:  
+
+## level 4: 
