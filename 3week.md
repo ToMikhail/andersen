@@ -39,7 +39,8 @@
   - Kanban — Методика предполагает обсуждение производительности в режиме реального времени и полную прозрачность рабочих процессов. Рабочие задачи визуально представлены на доске Kanban, что позволяет участникам команды видеть состояние каждой задачи в любой момент времени.
 - Understanding of the purpose of using Jira systems;
 ## level 3:  
-- Understanding of primary SDLC models; 
+- Understanding of primary SDLC models;
+  - Жизненный цикл разработки ПО (System/Software Development Life Cycle, SDLC)
 - Applying principals of selected SDLC model in practice;
 ## level 4:  
 - agile vs scrum/kanban; - Если фреймворк Scrum сразу определяет рамки процесса, то канбан-метод встраивается в любой существующий и позволяет начать с того, что есть сейчас, постепенно его улучшая.
