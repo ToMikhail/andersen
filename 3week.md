@@ -67,7 +67,7 @@
 - Age of cookie;](https://learn.javascript.ru/cookie#expires-max-age) 
 
 
-# XX. HTML. Semantic, Critical Rendering path, block/inline elements (required level 3)
+# 21. HTML. Semantic, Critical Rendering path, block/inline elements (required level 3)
 ## level 1:  
 - Basic scheme for HTML document;
 - HTML symbols usage;
@@ -86,7 +86,7 @@
 - Media (basic understanding what is it ond for what);
 
 
-# XX. CSS. Selector types, Selector weight, styles that are inherited (required level 3)
+# 22. CSS. Selector types, Selector weight, styles that are inherited (required level 3)
 ## level 1:  
 - Frameworks layout technique;
 - Selectors and their weight;
