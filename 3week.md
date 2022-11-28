@@ -87,7 +87,7 @@
 **level 2:**  
 - -
 **level 3:**  
-- [What is cookie;](https://learn.javascript.ru/cookie#chtenie-iz-document-cookie)
+- [What is cookie;](https://learn.javascript.ru/cookie#chtenie-iz-document-cookie);   
 **level 4:**  
 - [Setting and getting of cookies;](https://learn.javascript.ru/cookie#chtenie-iz-document-cookie)
 - Age of cookie;](https://learn.javascript.ru/cookie#expires-max-age) 
