@@ -1,16 +1,6 @@
 [be back](https://github.com/ToMikhail/andersen)
-# 16. Regular Expressions, RegExp (required level x)
-## level 1:  
-- [What is RegExp]()
-- [How to use RegExp]()
-## level 2:  
-- [Two methods of RegExp object;]()
-## level 3:  
-- [Two ways to create RegExp;]()
-## level 4:  
-- [Basic RegExp pattern (character classes);]()
 
-# 17. Work with backend (required level 4)
+# 18. Work with backend (required level 4)
 ## level 1:  
 - [what is https;](https://developer.mozilla.org/ru/docs/Glossary/https)
 - [what is status codes;](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
@@ -38,17 +28,34 @@
 - Set headers in request;(https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest/setRequestHeader)
 - How to get around CORS;() - ???????????
 
-# 18. Request parameters and JSON (required level 2)
+# 18. Development methodologies (agile and beyond) (required level 2)
 ## level 1:  
-- [Clone objects with JSON methods;](https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/)
+- Why do we need metodology in our team;
+- definition of agile;
 ## level 2:  
-- [How to add request body]()(https://ru.hexlet.io/courses/http_protocol/lessons/body/theory_unit)
+- Definition of scrum and kanban. Base concept;
+- Understanding of the purpose of using Jira systems;
 ## level 3:  
-- [How to send requests with different content types and what is it for]()
+- Understanding of primary SDLC models; 
+- Applying principals of selected SDLC model in practice;
 ## level 4:  
-- [Read the response that came from the back-end and process it (how to save the file, how to filter out unnecessary data before using it in the target function);]() 
+- agile vs scrum/kanban;
+- providing estimates of efforts required for implementing the tasks;
 
-# 19. Cookie (required level 3)
+# 19. Browser. Events (required level 3)
+## level 1:  
+- DOM events;
+- Handling (add/remove event handlers);
+## level 2:   
+- Basic types of DOM events;
+## level 3:  
+- Ways to prevent DOM event;
+## level 4:  
+- Events propagation (bubbling/capturing);
+- Events delegation;
+
+
+# 20. Cookie (required level 3)
 ## level 1:  
 - -
 ## level 2:  
@@ -58,3 +65,53 @@
 ## level 4:  
 - [Setting and getting of cookies;](https://learn.javascript.ru/cookie#chtenie-iz-document-cookie)
 - Age of cookie;](https://learn.javascript.ru/cookie#expires-max-age) 
+
+
+# XX. HTML. Semantic, Critical Rendering path, block/inline elements (required level 3)
+## level 1:  
+- Basic scheme for HTML document;
+- HTML symbols usage;
+- Text formatting, paragraphs;
+## level 2:  
+- HTML links. Link target;
+- HTML tables;
+- Adding of scripts;
+- Basic html elements (block, input, nav, select, p, li, button, forms, etc.)
+## level 3:  
+- Difference between block and inline elements;
+- Types of inputs;
+- Types of buttons;
+- Work with forms;
+## level 4:  
+- Media (basic understanding what is it ond for what);
+
+
+# XX. CSS. Selector types, Selector weight, styles that are inherited (required level 3)
+## level 1:  
+- Frameworks layout technique;
+- Selectors and their weight;
+- Positioning;
+- Margings vs paddings;
+## level 2:  
+- Fonts adding;
+- Element visibility. Ways to hide element;
+- Inline/block/block-inline elements, difference
+## level 3:  
+- Z-index;
+- Types of position;
+- Types of display;
+## level 4:  
+- Flexbox layout technique;
+- Responsive design (concept understanding);
+- CSS Box Model
+
+
+# XX. Nam (required level x)
+## level 1:  
+
+## level 2:  
+
+## level 3:  
+
+## level 4:  
+
