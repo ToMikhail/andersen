@@ -37,7 +37,7 @@
 - Definition of scrum and kanban. Base concept;  
   - SCRUM -  это набор правил для организации гибкого рабочего процесса, который заключается в командном подходе, работе итерациями, фокусировке на цели каждой итерации и нестандартном распределении обязанностей внутри коллектива.
   - Kanban — Методика предполагает обсуждение производительности в режиме реального времени и полную прозрачность рабочих процессов. Рабочие задачи визуально представлены на доске Kanban, что позволяет участникам команды видеть состояние каждой задачи в любой момент времени.
-- Understanding of the purpose of using Jira systems;
+- Understanding of the purpose of using Jira systems - платформа для управления проектами, задачами и отслеживания ошибок;
 ## level 3:  
 - Understanding of primary SDLC models;
   - Жизненный цикл разработки ПО (System/Software Development Life Cycle, SDLC);
@@ -60,14 +60,25 @@
 # 19. Browser. Events (required level 3)
 ## level 1:  
 - DOM events;
+   -https://learn.javascript.ru/introduction-browser-events
 - Handling (add/remove event handlers);
+  - https://learn.javascript.ru/introduction-browser-events#obrabotchiki-sobytiy
 ## level 2:   
 - Basic types of DOM events;
+  - mouse events ( MouseEvent ): mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout, contextmenu.
+  - touch events ( TouchEvent ): touchstart, touchmove, touchend, touchcancel.
+  - keyboard events ( KeyboardEvent ): keydown, keypress, keyup.
+  - form events: focus, blur, change, submit.
 ## level 3:  
 - Ways to prevent DOM event;
+  - https://learn.javascript.ru/bubbling-and-capturing#prekraschenie-vsplytiya
+  - stopPropagation() - препятствует продвижению события дальше, но на текущем элементе все обработчики будут вызваны.
+  - event.stopImmediatePropagation() - Для того, чтобы полностью остановить обработку, существует метод 
 ## level 4:  
 - Events propagation (bubbling/capturing);
+  - https://learn.javascript.ru/bubbling-and-capturing
 - Events delegation;
+  - https://learn.javascript.ru/event-delegation
 
 
 # 20. Cookie (required level 3)
@@ -85,20 +96,52 @@
 # 21. HTML. Semantic, Critical Rendering path, block/inline elements (required level 3)
 ## level 1:  
 - Basic scheme for HTML document;
+  - https://ru.hexlet.io/courses/layout-designer-basics/lessons/page-structure/theory_unit
 - HTML symbols usage;
 - Text formatting, paragraphs;
 ## level 2:  
 - HTML links. Link target;
+  - https://developer.mozilla.org/ru/docs/Web/HTML/Element/A
 - HTML tables;
 - Adding of scripts;
+  - http://htmlbook.ru/html/script
 - Basic html elements (block, input, nav, select, p, li, button, forms, etc.)
+  - https://developer.mozilla.org/ru/docs/Web/HTML/Element/Input#notes
 ## level 3:  
 - Difference between block and inline elements;
+  - https://itchief.ru/html-and-css/display
 - Types of inputs;
+    - text: Однострочное текстовое поле. Переносы строк автоматически удаляются из входного значения.
+    - button: Кнопка без предопределённого поведения.
+    - checkbox: Флажок («чекбокс»). Следует использовать атрибут value для определения значения, которое будет отдано этим элементом. Используйте атрибут checked, чтобы указать, должен ли флажок быть выставлен. Можно также использовать атрибут indeterminate, чтобы указать, что флажок находится в неопределённом состоянии (на большинстве платформ при этом рисуется горизонтальная линия поперёк флажка).
+    - date: HTML5 Элемент управления для ввода даты (год, месяц и день, без времени).
+    - time: HTML5 Элемент управления для ввода значения времени без часового пояса.
+    - number: HTML5 Элемент управления ввода числа(тип float).
+    - month: HTML5 Элемент управления для ввода месяца и года без часового пояса.
+    - email: HTML5 Поле для редактирования адреса электронной почты. Перед отправкой проверяется, что входное значение содержит либо пустую строку, либо один действительный адрес электронной почты. Соответствуют CSS псевдоклассам :valid and :invalid.
+    - file: Элемент управления, который позволяет пользователю выбрать файл. Используйте атрибут accept, чтобы определить типы файлов, которые могут быть выбраны.
+    - hidden: Элемент управления, которые не отображается, но чьё значение отправлено на сервер
+    - password: Однострочное текстовое поле, чьё значение скрыто символом "звёздочка". Используйте атрибуты minlength и maxlength, чтобы указать минимальную и максимальную длину значения, которое может быть введено.
+    - adio: Кнопка-переключатель, позволяет выбрать одно значение из множественного выбора.
+    - range: HTML5Элемент управления для ввода числа, точное значение которого не имеет значения. Этот тип управления использует следующие значения по умолчанию, если соответствующие атрибуты не указаны:
+    - reset: Кнопка сброса содержимого формы в состояние по умолчанию.
+    - submit: Кнопка для отправления формы.
+    - tel.
 - Types of buttons;
+    - button -The button is a clickable button
+    - submit - submits form-data
+    - reset	- resets the form-data to its initial values)
 - Work with forms;
+  - https://webref.ru/course/html-content/forms
 ## level 4:  
-- Media (basic understanding what is it ond for what);
+- Media (basic understanding what is it and for what);
+- Critical Rendering path
+  - построение DOM-дерева,
+  - построение CSSOM-дерева,
+  - запуск JavaScript,
+  - создание Render-дерева,
+  - генерация раскладки,
+  - отрисовка.
 
 
 # 22. CSS. Selector types, Selector weight, styles that are inherited (required level 3)
