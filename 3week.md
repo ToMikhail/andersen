@@ -135,7 +135,7 @@
   - https://webref.ru/course/html-content/forms
 ## level 4:  
 - Media (basic understanding what is it and for what);
-- Critical Rendering path
+- Critical Rendering path - https://habr.com/ru/post/320430/
   - построение DOM-дерева,
   - построение CSSOM-дерева,
   - запуск JavaScript,
@@ -146,22 +146,36 @@
 
 # 22. CSS. Selector types, Selector weight, styles that are inherited (required level 3)
 ## level 1:  
-- Frameworks layout technique;
-- Selectors and their weight;
-- Positioning;
+- Frameworks layout technique; - https://jazzteam.ru/technical-articles/overview-of-approaches-and-css-frameworks-for-adaptive-web-page-layout/
+  - Фиксированная верстка (Fixed Layout)
+  - Резиновая верстка (Elastic layout)
+  - Адаптивная верстка (Adaptive Layout) -  с использованием медиа-запросов (@media)
+  - Отзывчивая верстка (Responsive Layout)
+- Selectors and their weight; - https://habr.com/ru/post/137588/
+- Positioning - https://itchief.ru/html-and-css/positioning-elements#:~:text=CSS%20%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE%20position%20%E2%80%94%20%D1%8D%D1%82%D0%BE%20%D0%BE%D0%B4%D0%BD%D0%BE,%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D1%85%20%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%20%D0%BD%D0%B0%20%D0%B2%D0%B5%D0%B1%2D%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B5.
+   - static (статичное позиционирование);
+   - relative (относительное);
+   - absolute (абсолютное);
+   - fixed (фиксированное);
+   - sticky (липкое).
 - Margings vs paddings;
 ## level 2:  
-- Fonts adding;
-- Element visibility. Ways to hide element;
+- Fonts adding; - https://developer.mozilla.org/ru/docs/Web/CSS/@font-face
+- Element visibility. Ways to hide element; - https://habr.com/ru/company/ruvds/blog/485640/
 - Inline/block/block-inline elements, difference
 ## level 3:  
-- Z-index;
+- Z-index; - https://developer.mozilla.org/ru/docs/Web/CSS/z-index#:~:text=CSS%2D%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE%20z%2Dindex%20%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%8F%D0%B5%D1%82,%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%20%D1%81%20%D0%BC%D0%B5%D0%BD%D1%8C%D1%88%D0%B8%D0%BC%20z%2Dindex.
 - Types of position;
-- Types of display;
+   - static (статичное позиционирование);
+   - relative (относительное);
+   - absolute (абсолютное);
+   - fixed (фиксированное);
+   - sticky (липкое).
+- Types of display;- https://learn.javascript.ru/display
 ## level 4:  
-- Flexbox layout technique;
+- Flexbox layout technique; - https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 - Responsive design (concept understanding);
-- CSS Box Model
+- CSS Box Model - https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox
 
 
 # XX. Nam (required level x)
