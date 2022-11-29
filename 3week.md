@@ -1,20 +1,37 @@
 [be back](https://github.com/ToMikhail/andersen)
 
 # 18. Work with backend (required level 4)
+
 **level 1:**
+
 - [what is https;](https://developer.mozilla.org/ru/docs/Glossary/https)
 - [what is status codes;](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
 - [what is AJAX;](https://developer.mozilla.org/ru/docs/Web/Guide/AJAX)
 - [what is JSON;](https://habr.com/ru/post/554274/)
   - (https://tproger.ru/articles/chto-takoe-json-vvedenie/)
+  - 
 **level 2:**  
+
 - [Basic usage of XHR, how to make simple request and handle answer) response code groups](https://learn.javascript.ru/xmlhttprequest) 
   - (https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest)
   - [video.Minin.serverRequests](https://www.youtube.com/watch?v=eKCD9djJQKc)
+  > let xhr = new XMLHttpRequest()
+  > xhr.open(method, URL, [async, user, password])
+  > xhr.send([body])
 - [Basic usage of fetch() (how to make simple request and handle answer);](https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch)
   - (https://learn.javascript.ru/fetch)
   - [fetch(video)](https://www.youtube.com/watch?v=eKCD9djJQKc)
-**level 3:**
+    > let promise = fetch(url, [options])
+    > let response = await fetch(url);
+    > if (response.ok) { // если HTTP-статус в диапазоне 200-299
+    > // получаем тело ответа (см. про этот метод ниже)
+    >  let json = await response.json();
+    > } else {
+    > alert("Ошибка HTTP: " + response.status);
+    > }
+    > 
+**level 3:**   
+
 - CRUD HTTP methods;(https://proglib.io/p/chto-takoe-api-i-crud-prostymi-slovami)
 - [What is REST?](https://medium.com/@andr.ivas12/rest-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BC-%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%BC-90a0bca0bc78)
   - https://habr.com/ru/post/38730/
@@ -23,7 +40,9 @@
   - (https://developer.mozilla.org/ru/docs/Web/HTTP/CORS)
   - (https://learn.javascript.ru/fetch-crossorigin#zachem-nuzhen-cors-ekskurs-v-istoriyu)
 - Difference between PUT, PATCH, POST;(https://proglib.io/p/chto-takoe-api-i-crud-prostymi-slovami)
+- 
 **level 4:**  
+
 - What is CORS and why we need it;(https://habr.com/ru/company/macloud/blog/553826/)
 - Work with json responce;(https://developer.mozilla.org/en-US/docs/Web/API/Response/json)
 - Set headers in request;(https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest/setRequestHeader)
