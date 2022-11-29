@@ -15,21 +15,24 @@
 - [Basic usage of XHR, how to make simple request and handle answer) response code groups](https://learn.javascript.ru/xmlhttprequest) 
   - (https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest)
   - [video.Minin.serverRequests](https://www.youtube.com/watch?v=eKCD9djJQKc)
-  > let xhr = new XMLHttpRequest()
-  > xhr.open(method, URL, [async, user, password])
-  > xhr.send([body])
+  ``` 
+      let xhr = new XMLHttpRequest()
+      xhr.open(method, URL, [async, user, password])
+      xhr.send([body])
+  ```
 - [Basic usage of fetch() (how to make simple request and handle answer);](https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch)
   - (https://learn.javascript.ru/fetch)
   - [fetch(video)](https://www.youtube.com/watch?v=eKCD9djJQKc)
-    > let promise = fetch(url, [options])
-    > let response = await fetch(url);
-    > if (response.ok) { // если HTTP-статус в диапазоне 200-299
-    > // получаем тело ответа (см. про этот метод ниже)
-    >  let json = await response.json();
-    > } else {
-    > alert("Ошибка HTTP: " + response.status);
-    > }
-    > 
+    ```
+    let promise = fetch(url, [options])
+    let response = await fetch(url);
+    if (response.ok) { // если HTTP-статус в диапазоне 200-299
+    // получаем тело ответа (см. про этот метод ниже)
+    let json = await response.json();
+    } else {
+    alert("Ошибка HTTP: " + response.status);
+    }
+    ``` 
 **level 3:**   
 
 - CRUD HTTP methods;(https://proglib.io/p/chto-takoe-api-i-crud-prostymi-slovami)
