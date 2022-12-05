@@ -44,6 +44,8 @@
   - Каррирование - преобразование ф-ций с множеством аргументов в набор вложенных фуекций с аргументами. Каррирование – это трансформация функций таким образом, чтобы они принимали аргументы не как f(a, b, c), а как f(a)(b)(c). 
     - https://learn.javascript.ru/currying-partials
   - Частичное применение - преобразование функции в другую функцию обладающую меньшим числом аргументов;
+  
+  - https://doka.guide/js/fp/#:~:text=%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D1%81%D1%83%D1%82%D0%B8%20%E2%80%94%20%D1%8D%D1%82%D0%BE,%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B9%20%D0%B8%D1%85%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%20%D0%BD%D0%B5%D1%82!
 
 **level 4:** 
 
@@ -55,19 +57,56 @@
 **level 1:**  
 
 - [Clone objects with JSON methods;](https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/)
+  - Spread operators - const cloneObj = { ...someObj }; - shalow copy
+  - Object.assign - Object.asign({}, someObj) - shalow copy;
+  - JSON - const cloneObj = JSON.parse(JSON.stringify(someObj)); - deep copy
 
 **level 2:**  
 
-- [How to add request body](https://ru.hexlet.io/courses/http_protocol/lessons/body/theory_unit)
+- How to add request body
+  - https://ru.hexlet.io/courses/http_protocol/lessons/body/theory_unit
+
+```
+var xhr = new XMLHttpRequest();
+xhr.open('POST', '/submit', true);
+
+xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
+
+xhr.onreadystatechange = function() {
+  if (this.readyState != 4) return;
+
+  alert( this.responseText );
+}
+
+xhr.send(body);
+```
 
 **level 3:** 
 
-- [How to send requests with different content types and what is it for]()
+- [How to send requests with different content types and what is it for](https://learn.javascript.ru/xhr-forms)
+  В стандартных HTTP-формах для метода POST доступны три кодировки, задаваемые через атрибут enctype:   
+    - application/x-www-form-urlencoded
+    - multipart/form-data
+    - text/plain   
+> У форм есть две основные кодировки: application/x-www-form-urlencoded – по умолчанию и multipart/form-data – для POST запросов, если явно указана в enctype. Вторая > кодировка обычно используется для больших данных и только для тела запроса.
+> Для составления запроса в application/x-www-form-urlencoded используется функция encodeURIComponent.
+> Для отправки запроса в multipart/form-data – объект FormData.
+> Для обмена данными JS ↔ сервер можно использовать и просто JSON, желательно с указанием кодировки в заголовке Content-Type.
 
 ** level 4:**  
 
 - Read the response that came from the back-end and process it;
-- how to save the file, how to filter out unnecessary data before using it in the target function;
+  - Fetch()
+    - response.text() – читает ответ и возвращает как обычный текст,
+    - response.json() – декодирует ответ в формате JSON,
+    - response.formData() – возвращает ответ как объект FormData (разберём его в следующей главе),
+    - response.blob() – возвращает объект как Blob (бинарные данные с типом),
+    - response.arrayBuffer();  
+    - response.body – это объект ReadableStream, с помощью которого можно считывать тело запроса по частям. 
+
+    - Заголовки ответа модно получить - response.headers.get('Content-Type'))
+- how to save the file, how to filter out unnecessary data before using it in the target function; 
+  - https://learn.javascript.ru/xmlhttprequest
 
 
 # 27. Angular.Component (required level x)
