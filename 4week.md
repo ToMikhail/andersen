@@ -213,7 +213,10 @@ export class AppModule { }
 
 **level 4:**  
 
-- Types of modules
+- Types of modules 
+  - модули страниц;
+  -  модули сервисов;
+  -  модули компонентов для многократного использования (shared).
 
 
 # 29. Angular. Service (required level 4)
