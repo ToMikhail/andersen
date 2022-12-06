@@ -113,9 +113,18 @@ xhr.send(body);
 
 **level 1:**  
 
-- What is a component?
+- What is a component? - Компонент (Angular component) - обособленная часть функционала со своей логикой, HTML-шаблоном и CSS-стилями.
+Класс становится Angular компонентом, если его объявлению предшествует декоратор @Component() с объектом конфигурации.
 - What metadata are we passing to @Component?
-- What is Directive;
+  selector:    'app-hero-list',
+  templateUrl: './hero-list.component.html',
+  styleUrls: ['./row-card.component.scss']
+  providers:  [ HeroService ]
+  
+- What is Directive; - это компоенент без шаблона
+  - С собственным шаблоном, или по-другому компоненты (компоненты являются директивами);
+  - Структурные, которые изменяют структуру DOM-дерева; ( **ngIf, **ngFor, **ngSwitch)
+  - Атрибуты, которые изменяют внешний вид или поведение по умолчанию элемента DOM-дерева.
 
 **level 2:**  
 
@@ -126,6 +135,7 @@ xhr.send(body);
 
 - How can you transfer data between components?
 - What is the minimum definition of a component;
+  Создать class, export его, функция декортатор @Component({selector:'', templateUrl: ''})
 
 **level 4:** 
 
@@ -136,7 +146,61 @@ xhr.send(body);
 
 **level 1:**  
 
--
+- Angular имеет модеульную архитектуру, в отличии от React(компонентную). Масшиабиаемость 
+  
+  Для создания отдетного модуля создаем файл .module.ts в ктором @NgModule  - декортатор и класс.
+  
+```
+@NgModule({
+  declarations: [
+    AppComponent,
+    AboutComponent,
+    HomeComponent,
+    PostsComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+  
+  - declorations: - это массив где решистрируются все компоненты, директивы и пайрыж
+  - imports: - это массив, куда импартируются другие модули(BrowserModule? FormsModule, свои созданные модули;
+  - exports - подмножество объявлений, которые должны быть видны и использоваться в шаблонах компонентов других модулей NgModules.
+  - providers - это массив , где регистриуются сервисыж
+  - bootstrap - для главного компонента приложения (точка входа).
+  
+  Для общих сущностей которые используются в разных модулях создается отдельный модуль(обычно в папке shared). Сущности заносятся в declorations (массив) и возвращаются в exports (массив). Затем в imports (массиве) зарегестрировать shared модуль app. и др.
+  
+  Метод forRoots(routes) - только для app.module;
+  Метод forChild(routes) - используется для остальных модулей приложения при маршрутизации.
+  
+  Для оптимизации и декомпозирования элементов.
+  
+  Lasy loading - отложенная загрузка.
+  
+  При работе с разбивкой на модули есть возможность разбивики на части (на chunks). Позволит загружать сначала необходимый для рендеринга компоненет, а при переходе будет загружать тоже необходимый компонет(chunk)
+  
+  В  app-routing.module.ts доббваить объект с path: '...' и loadChildren: 'link#classModule(класс модуля)'. Новый синтаксиси позволяет передовать функцию (стрелочную):
+  
+  ```
+  loadChildren: () => import('link').then(m => m.AboutPageModule)
+  ```
+  
+  ***Изменить стратегию загрузки*** в app.modile.ts необходимо в app.module.ts
+  
+  ```
+  imports: [
+    RouterModule.forRout(routes),
+    {preLoadingStrategy:PreloadingAllModules (или noPreloading)}
+  ]
+  ```
+  
+Это позволяет изменить загрузку компонентов. В первую очередь загрузятся все необходимые компоеннеты для рендеринга, а после все остальные (для роутинга). Что бы можно было перехолдить через ссылки без перезагрузок.
 
 **level 2:**  
 
