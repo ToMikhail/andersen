@@ -131,26 +131,28 @@
   >Какие бывают встроенные pipes (доступны благодоря BroserModule in app.module.ts):   
   >* {var | number | uppercase | lowercase | titlecase | slice:a:5 | percent | cerncy | date:'long' | async}  
   
-- What are they needed for; - В декортаторе есть поле name @Pipe({name: 'pipeName'}) 
+- What are they needed for; - В декортаторе есть поле name @Pipe({name: 'pipeName'})
 
 **level 2:**  
 
-- How do implement a custom pipe;
-- How do pass a parameter to a pipe;
+- How do implement a custom pipe; - Необходимо  класс implements от interface PipeTransform и реализовать метод в нем transform(мvalue, args) + decorator @Pipe({ name: 'pipeName'}). 
+- How do pass a parameter to a pipe; - Example ({{ vavr | number: '1.1-5'}})
 
 **level 3:**  
 
-- What parameters does transform() take - Необходимо implements класс от PipeTransform и метод в нем transform. 
+- What parameters does transform() take - Необходимо implements класс от PipeTransform и метод в нем transform. (value - что обрабатываем и args(либо arg) - можно и без него)
 
 **level 4:** 
 
 - Custom async pipes;
+  >Что бы сделать из Pure Impure Pipe неоьбходимо добавиьт поле **pure: false**  в декортаторе
 - pure vs. impure pipes;
   Pipes  могут быть: 
   - Pure(чистые) - отрабатывают на изменения ссылки;
   - Impure(нечистые) - этрабатывает на все изменения, не только ссылки это async, json;
-  Что бы сделать из Pure Impure Pipe неоьбходимо добавиьт поле pure: false  в декортаторе
+  
 - Async pipe;
+  для работы со стримами с promise, observable, setTimout, что бы вывести инфу надо использовать async Pipe, иначе вывод [Object Promise]
 
 
 # 34. Reactive Forms (required level 4)
