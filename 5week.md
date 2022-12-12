@@ -78,12 +78,26 @@
 
 **level 1:**  
 
-- What is RegExp - https://learn.javascript.ru/regexp-introduction
+- What is RegExp - мощное средство поиска и замены в строке. - https://learn.javascript.ru/regexp-introduction
 - How to use RegExp
 
 **level 2:**  
 
 - Two methods of RegExp object - в JavaScript объект RegExp представляет собой объект регулярного выражения с предопределенными свойствами и методами;
+  - str.match(regexp) - Метод str.match(regexp) для строки str возвращает совпадения с регулярным выражением regexp.
+  ```
+  let str = "Любо, братцы, любо!";
+  alert( str.match(/любо/gi) ); // Любо,любо (массив из 2х подстрок-совпадений)
+  ```
+  
+  - str.replace(regexp, replacement) - заменяет совпадения с regexp в строке str на replacement (все, если есть флаг g, иначе только первое).
+  ```
+  // без флага g
+  alert( "We will, we will".replace(/we/i, "I") ); // I will, we will
+
+  // с флагом g
+  alert( "We will, we will".replace(/we/ig, "I") ); // I will, I will
+  ```
   - test() - Он ищет в строке шаблон и возвращает true или false в зависимости от результата.
     - https://learn.javascript.ru/regexp-introduction#proverka-regexp-test
     - https://learn.javascript.ru/regexp-methods#regexp-test-str
@@ -99,7 +113,7 @@
 
 **level 3:**  
 
-- Two ways to create RegExp; - https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+- Two ways to create RegExp; - Символьный класс – это специальное обозначение, которое соответствует любому символу из определённого набора. - https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp
   - Литеральное обозначение принимает шаблон между двумя косыми чертами, за которыми следуют необязательные флаги после второй косой черты. 
   - Функция-конструктор принимает строку или объект RegExp в качестве первого параметра и строку необязательных флагов в качестве второго параметра.
 
