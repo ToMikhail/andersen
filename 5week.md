@@ -127,8 +127,11 @@
 
 **level 1:**  
 
-- What is a pipe;
-- What are they needed for;
+- What is a pipe; - это класс для изменения внешнего вида данных в шаблоне. В декортаторе есть поле name @Pipe({name: 'pipeName'});
+  >Какие бывают встроенные pipes (доступны благодоря BroserModule in app.module.ts):   
+  >* {var | number | uppercase | lowercase | titlecase | slice:a:5 | percent | cerncy | date:'long' | async}  
+  
+- What are they needed for; - В декортаторе есть поле name @Pipe({name: 'pipeName'}) 
 
 **level 2:**  
 
@@ -137,12 +140,16 @@
 
 **level 3:**  
 
-- What parameters does transform() take
+- What parameters does transform() take - Необходимо implements класс от PipeTransform и метод в нем transform. 
 
 **level 4:** 
 
 - Custom async pipes;
 - pure vs. impure pipes;
+  Pipes  могут быть: 
+  - Pure(чистые) - отрабатывают на изменения ссылки;
+  - Impure(нечистые) - этрабатывает на все изменения, не только ссылки это async, json;
+  Что бы сделать из Pure Impure Pipe неоьбходимо добавиьт поле pure: false  в декортаторе
 - Async pipe;
 
 
