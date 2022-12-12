@@ -160,25 +160,154 @@
 **level 1:**  
 
 - What's the difference between Template Driven Form and Reactive Form;
-- What is FormControl, FormGroup;
+   - Шаблонный подход (template driven forms);
+   - Реактивный подход (Reactive forms). Через controls - это экземпляры класса FornControl, FormGroup, FormArray, FormBuilder;
+
+    Различия между template-driven forms и Reactive forms:  
+      - *Reactive forms* - sync, *template-driven forms* - async; 
+      - *Reactive forms* - управление происходит в класса модели (component). Богатая API. *template-driven form* - управление происходит в шаблоне (в html)          (фактически 2-way binding ( [(ngModel)]='var'));
+      - *Reactive forms*- для сложных форм. *template-driven form* - для протсоых форм;
+      - *Reactive forms* - гибкость настроек;
+      - 
+- What is FormControl, FormGroup; - это экземпляры класса FornControl, FormGroup, FormArray, FormBuilder;
 - How do we link form elements in a template and a component;
 
 **level 2:**  
 
-- What is FormBuilder, FormArray;
+- What is FormBuilder -  предоставляет синтаксический сахар, который сокращает создание экземпляров FormControl, FormGroup или FormArray. Это уменьшает количество шаблонов, необходимых для создания сложных форм., 
+- FormArray; - объединяет значения каждого дочернего элемента FormControl в массив
 - What's the difference between a dirty, touched, and pristine form element;
-- How does the form validation work;
+  заимодействие с валидаторами состояния INPUT (Статусы состояния(Кдассы в html в браузере)). Валидаторы имеют следующие состояния:
+    pristine - когда еще ничего не вводили;
+    dirty - когда что то ввели;
+    touched - когда было переведено в focus;
+    untouched - когда не было переведено в focus, не тронуто;
+    valid - когда пройдена валидация;
+    invalid - когда не пройдена валидация;
+    pending - когда ждем ответа от валидатора
+    
+ - How does the form validation work;
+> Валидатор (validator) - это функция которая возращает функцию (ValidatorFn) которая получает control и синхронно возвращает карту ошибок проверки, если они есть, в >противном случае — null.
+
+  >Валидаторы (validator) для форм бывают:
+  > - встроенные (built-in) - required, email, pattern и minLength;
+  > - пользовательский (custom validators);
+  >и
+  > - async;
+  > - sync;
 
 **level 3:**  
 
 - How to add / remove validator after form initialization? (setValidators, clearValidators)
+  - setValidators() - Задает синхронные валидаторы, активные для этого элемента управления. Вызов этого перезаписывает любые существующие синхронные валидаторы.
+  ```
+  this.myform.controls["mobile"].setValidators(Validators.required);
+  ```
+  clearValidators - Не существует опции, которая может удалить отдельный валидатор. Используйте clearValidators, чтобы удалить все валидаторы элемента управления.
+  ```
+  this.myForm.controls['controlName'].clearValidators()
+  ```
 
 **level 4:**
 
 - Dealing with errors of the form setErrors, getError, hasError
+  - setErrors - Устанавливает ошибки в элементе управления формы при выполнении проверок вручную, а не автоматически
+  ```
+  this.form.get('name').setErrors({'server-error':'error'});
+  ```
+  - getError() - Сообщает данные об ошибках для control с заданным путем
+  - hasErroro() - Сообщает, имеет ли элемент управления с заданным путем указанную ошибку.
+  
 
+# 35. Angular.Routing (required level 3)
 
-# 35. RxJx. Operators (required level 3)
+**level 1:**  
+
+- Initialising router;
+    1.Создаем компоненты страницы приложения (страницы или routes);
+    2. создаем routing модуль, который содержит @NgModule декоратор со свойствами imports и exports. И в imports передаем пути для строниц (routes). routes - это массив объектов [{},{},{}] со свойствами path: 'путь до строницы', component: имя класса отвечающего за компонент, (это обязательные), и по требованию свойство children: с массивом обхектов (дочерних страниц). Вместо component может идти свойство redirectTo c указанием страницы (route) куда необходимо перенаправить в случае неверног гзадание ссылки (ошибка в пути).
+    3. Регестрируем созданный модуль с app.module.ts в imports [];
+    4. В app.component.html => прописывается тег router-outlet
+  ```
+  const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'about', component: AboutComponent, children: [
+    {path: 'extra', component: AboutExtraComponent}
+  ]},
+  {path: 'posts', component: PostsComponent},
+  {path: 'posts/:id', component: PostComponent},
+  {path: '**', redirectTo: ''},
+  ]
+
+    @NgModule({
+      imports: [RouterModule.forRoot(routes)],
+      exports: [RouterModule],
+    })
+    export default class AppRoutingModule {}
+  ```
+  - Explain behind such properties in a route config object:
+        -path - Путь для сопоставления
+        -pathMatch - используется совместно с redirectTo
+        -component - компонент для отображения при переходе на URL, совпадающий с path;
+        -redirectTo - перенаправляет на указанный URL при попадании на маршрут, указанный в path
+        -data - Дополнительные определенные разработчиком данные, предоставляемые компоненту через ActivatedRoute. По умолчанию никакие дополнительные данные не передаются.;
+        
+- Rroute event;
+  - NavigationStart - начало навигации;
+  - RoutesRecognized - завершение процесса парсинга URL и распознавания маршрутов;
+  - RouteConfigLoadStart - инициируется непосредственно перед асинхронной загрузкой маршрутов;
+  - RouteConfigLoadEnd - инициируется непосредственно после асинхронной загрузкой маршрутов;
+  - NavigationEnd - завершение навигации;
+  - NavigationCancel - навигация отклонена, возникает, когда guard возвращает false;
+  - NavigationError - возникновение непредвиденной ошибки в процессе осуществления навигации.
+
+**level 2:**  
+
+- What is Router Guard - позволяют ограничить доступ к маршрутам на основе определенного условия, например, только авторизованные пользователи с определенным набором прав могут просматривать страницу.;
+- Router Events order;
+- Define Route
+  - Получить значение параметра и свойства data позволяет сервис ActivatedRoute. В его экземпляре, определенном для компонента-маршрута, содержится полная информация.
+- ActivatedRoute
+- ParamMap - В шаблоне параметры маршрутизации передаются следующим образом: в качестве значения директивы указывается массив, первое значение которого URL, второе — значение параметра данного URL.;
+- ActivatedRoute vs ActivatedRouteSnapshot -  ActivatedRoute можно использовать повторно, ActivatedRouteSnapshot — это неизменяемый объект, представляющий конкретную версию ActivatedRoute.;
+
+**level 3:**  
+
+- What's the difference between canLoad and canActivate;  
+  - CanMatch - разрешает видеть или не видеть маршрут (route) - 1-й проверяется в "жизненном цикле";
+  - CanLoad - разрешает/запрещает загрузку модуля, загружаемого асинхронно - 2-й проверятеся;.
+  - CanDeactivate - разрешает/запрещает уход с текущего маршрута - 3-й проверятеся;
+  - CanActivate - разрешает/запрещает доступ к маршруту - 4-й проверятеся;;
+  - CanActivateChild -разрешает/запрещает доступ к дочернему маршруту - 5-й проверятеся;;
+  - Resolve - выполняет какое-либо действие перед переходом на маршрут, обычно ожидает данные от сервера - 6-й проверятеся;;
+  
+- What are child routes;
+- What are Resolvers; - для аутенфикации; - используется в сценарии, когда мы хотим убедиться, что данные доступны или нет, прежде чем перейти к какому-либо маршруту.
+- What is Lazy loading; = Вы можете настроить свои маршруты для отложенной загрузки модулей, что означает, что Angular загружает модули только по мере необходимости, а не загружает все модули при запуске приложения. Кроме того, предварительно загрузите части вашего приложения в фоновом режиме, чтобы улучшить взаимодействие с пользователем. 
+
+**level 4:** 
+
+- paramMap vs queryParamMap; 
+  - ParamMap для таких маршрутов, как user/:id. Id param принадлежит только этому маршруту.
+  - queryParamMap - это глобальный параметр запроса, его можно прочитать из ActivatedRoute в компоненте пользовательского маршрута, а также из любого из его предков.
+приложения.
+  - PreloadingStrategy - определяет логику предварительной загрузки и обработки лениво загруженных модулей Angular. Чтобы лениво загружать модули Angular, используйте loadChildren (вместо компонента) в конфигурации маршрутов AppRoutingModule следующим образом.
+  - Eager loading (default)- это стратегия загрузки по умолчанию для компонентов в Angular. Он впервые загружает все компоненты, зарегистрированные в NgModules 
+  - PreloadAllModules, which preloads all lazy-loaded routes, as the name implies
+  - QuicklinkStrategy, which preloads only the routes associated with links on the current page.
+- Events tracing/debugging - Включает регистрацию всех внутренних событий навигации на консоли. Дополнительное ведение журнала может быть полезно в целях отладки для проверки последовательности событий маршрутизатора.;
+  ```
+  const appRoutes: Routes = [];
+  bootstrapApplication(AppComponent,
+    {
+      providers: [
+        provideRouter(appRoutes, withDebugTracing())
+      ]
+    }
+  );
+  ```
+
+# 36. RxJx. Operators (required level 3)
 
 **level 1:**  
 
@@ -206,40 +335,6 @@
 **level 4:** 
 
 - Observable/observer as a software desing pattern
-
-
-# 36. Angular.Routing (required level 3)
-
-**level 1:**  
-
-- Initialising router;
-- Explain behind such properties in a route config object:
-        -path
-        -pathMatch
-        -component
-        -redirectTo
-        -data;
-- Rroute event;
-
-**level 2:**  
-
-- What is Router Guard;
-- Router Events order;
-- Define Route / ActivatedRoute / ParamMap;
-- ActivatedRoute vs ActivatedRouteSnapshot;
-
-**level 3:**  
-
-- What's the difference between canLoad and canActivate;
-- What are child routes;
-- What are Resolvers;
-- What is Lazy loading;
-
-**level 4:** 
-
-- paramMap vs queryParamMap;
-- PreloadingStrategy;
-- Events tracing/debugging;
 
 
 # 37. Angular.Change Detection (required level 4)
