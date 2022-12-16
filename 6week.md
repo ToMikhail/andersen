@@ -63,7 +63,7 @@
   - https://www.youtube.com/watch?v=OcphK_aEd7I 
 - Application.tick vs detectChanges;
   - Application.tick - этот метод для явной обработки обнаружения изменений и его побочных эффектов.
-  - **Application.tick** - запускается с  кщще предвставления,** detectChanges()** - запускается с компонента его вызвавшего вниз по дереву
+  - **Application.tick** - запускается с root предвставления,** detectChanges()** - запускается с компонента его вызвавшего вниз по дереву
 
 **level 4:** 
 
