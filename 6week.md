@@ -181,24 +181,55 @@ platformBrowserDynamic().bootstrapModule(AppModule, { ngZone: 'noop' })
 
 **level 1:**  
 
-- What is Dependency Injection and why is it needed?
+- What is Dependency Injection and why is it needed? 
+  - В проектировании программного обеспечения объектно-ориентированного программирования (ООП) внедрение зависимостей (DI) — это процесс предоставления ресурса, который требуется для данного фрагмента кода. DI подключен к фреймворку Angular и позволяет классам с декораторами Angular, такими как компоненты, директивы, конвейеры и инъекционные элементы, настраивать необходимые им зависимости.
 - The main components of Dependency Injection (Dependency, Injector, Provider)
-- What can Dependency be?
-- What is Injector?
-- What is a Provider?
+  - Dependency - это Injection Token (unique) и привязываемая сущность (класс) 
+  - Injector - это Объект в системе внедрения зависимостей Angular, который может найти именованную зависимость в своем кеше или создать зависимость с помощью настроенного провайдера. Инжекторы создаются для NgModules автоматически как часть процесса начальной загрузки и наследуются через иерархию компонентов.
+  - Provider - Объект (как создать класс), реализующий один из интерфейсов Provider. Объект поставщика определяет, как получить внедряемую зависимость, связанную с токеном DI. Инжектор использует провайдера для создания нового экземпляра зависимости для класса, который в ней нуждается.
+- What can Dependency be? - гибкая архитектура, нет дублирования кода.
+- What is Injector? - это Объект в системе внедрения зависимостей Angular, который может найти именованную зависимость в своем кеше или создать зависимость с помощью настроенного провайдера. Инжекторы создаются для NgModules автоматически как часть процесса начальной загрузки и наследуются через иерархию компонентов.
+- What is a Provider? - Объект (как создать класс), реализующий один из интерфейсов Provider. Объект поставщика определяет, как получить внедряемую зависимость, связанную с токеном DI. Инжектор использует провайдера для создания нового экземпляра зависимости для класса, который в ней нуждается.
 
 **level 2:**  
 
 - How many injectors are there and how are they located? (In an Angular application, there can be several of these injectors, they are located in a tree hierarchy parallel to the component tree)
+  Injecot null   
+      ||   
+ Platform module Injector
+      ||
+  Injector App(root)   
+      ||  
+ Module Injector   
+      ||
+ Element Injector  
+ 
 - What are the ways to provide a dependency to the injector (providers, viewProviders, @Injectable)?
-- What defines a provider?
+  - Добавить в массив providers[] в NgModule в Модуль или добавить в модуль через @injectable {provideIn: root} <= 2 пвть предпочтительнее потому что tree shacking работаетж
+  - Задать его отдельно для component в providers или viewProviders [provider: token, useClass or useExisting or useFactory, useValue]
+- What defines a provider? - как мы будем использовать зависимость, useClass (как отдельный инстенс) or useExisting(для использования не всех возможностей класса) or useFactory (ф-ция с несколькоими сервисами), useValue (больше для тестирования =  new Token  Injection)
 
 **level 3:**  
 
 - @Inject () and @Injectable () what is the difference?
-- What is useClass, useValue, useFactory, useExisting;
+  - @Inject() это ручной механизм, позволяющий Angular узнать, что параметр должен быть введен. Его можно использовать так:
+  ```
+   constructor(@Inject(ChatWidget) private chatWidget) { }
+   }
+  ```
+  - @Injectable() сообщает Angular, что класс можно использовать с инжектором зависимостей. @Injectable() строго не требуется, если класс имеет другие декораторы Angular или не имеет никаких зависимостей. Важно то, что любой класс, который будет внедрен с помощью Angular, украшен. Тем не менее, лучше всего украшать инъекционные объекты с помощью @Injectable(), так как это имеет больше смысла для читателя.
+  
+- What is useClass, useValue, useFactory, useExisting 
+  - Angular Dependency Injection предоставляет несколько типов провайдеров.
+  ```
+   providers :[{ provide: ProductService, useClass: ProductService }]
+  ```
+    - useClass - если вы хотите предоставить экземпляр предоставленного класса.
+    - useValue -  если вы хотите предоставить простое значение.
+    - useFactory - ожидает, что мы предоставим функцию. Он вызывает функцию и вводит возвращаемое значение. Мы также можем добавить необязательные аргументы в    фабричную функцию, используя массив deps. Массив deps указывает, как вводить аргументы.
+    - useExisting - если вы хотите использовать нового поставщика вместо старого поставщика.
 - How does Angular look for a supplier in the injector hierarchy?
-- What are viewProviders?
+- What are viewProviders? - ViewProviders похожи на Providers, за исключением того, что определяемые вами зависимости видны только дочерним элементам представления. Они не видны дочерним элементам содержимого (content children - для ng-content).
 
 **level 4:** 
 
