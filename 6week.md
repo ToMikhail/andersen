@@ -234,14 +234,71 @@ platformBrowserDynamic().bootstrapModule(AppModule, { ngZone: 'noop' })
 **level 4:** 
 
 - Why do we need @Optional, @Host, @Self, @SkipSelf decorators
+  - @Optional -  считать внедряемый вами сервис необязательным. Таким образом, если это не может быть разрешено во время выполнения, Angular разрешает службу как null, а не выдает ошибку. 
+  - @Self - Angular будет смотреть на ElementInjector только для текущего компонента или директивы.
+  - @SkipSelf -Angular начинает поиск службы в родительском ElementInjector.
+  - @Host - позволяет указать компонент как последнюю остановку в дереве инжекторов при поиске поставщиков. Даже если есть экземпляр службы выше по дереву, Angular не будет продолжать искать Use @Host() 
+  
 - flag multi: true why is it?
-- What are tree-shakable providers?
+  - Использование multi: true сообщает Angular, что провайдер является мультипровайдером. Как упоминалось ранее, с несколькими поставщиками мы можем предоставить несколько значений для одного токена в DI. Это именно то, что мы делаем. У нас есть два провайдера, у обоих один и тот же токен, но они предоставляют разные значения. Если мы запросим зависимость для этого токена, мы получим список всех зарегистрированных и предоставленных значений.
+  
+- What are tree-shakable providers? - Одноэлементная служба создается при первом создании любого компонента, зависящего от нее. Считается лучшей практикой всегда украшать службу на основе классов с помощью Injectable .
 - Handmade injector;
 
 ---
 
 
-# 40. Angular. Testing. Unit (required level 3)
+# 40. Angular. Extra. CLI (required level 2)
+
+**level 1:**  
+
+**level 2:**  
+
+**level 3:**  
+
+- generate, add, build, serve etc
+  - ng new - Команда создает папку рабочей области Angular и генерирует новый скелет приложения.
+  - ng config - позволяет вам устанавливать и получать значения конфигурации из командной строки, или вы можете напрямую редактировать файл angular.json.
+  - add - Добавляет поддержку внешней библиотеки в ваш проект.
+  - serve - Создает и обслуживает ваше приложение, перестраивая изменения файлов.
+  - test	t - Запускает модульные тесты в проекте.
+  - build - Компилирует приложение или библиотеку Angular в выходной каталог с именем dist/ по указанному выходному пути.
+  - config - Извлекает или задает значения конфигурации Angular в файле angular.json для рабочей области.
+  - deploy - Вызывает построитель развертывания для указанного проекта
+  - generate	g - generete
+  - lint - Запускает инструменты анализа кода приложения Angular в заданной папке проекта.
+
+**level 4:**   
+
+- angular.json. What is it about
+  - Файл angular.json на корневом уровне рабочей области Angular предоставляет настройки по умолчанию для всей рабочей области и для конкретного проекта. Они используются для инструментов сборки и разработки, предоставляемых Angular CLI. Значения пути, указанные в конфигурации, относятся к корневому каталогу рабочей области.
+
+---
+
+# 41. Angular. Extra. Ivy (required level 2)
+
+**level 1:**  
+
+**level 2:**  
+
+**level 3:**  
+
+**level 4:** 
+
+- What is Ivy?
+  - Это движок для рендеринга. это кодовое название next-generation compilation and rendering pipeline. В версии 9 Angular по умолчанию используются новые инструкции компилятора и среды выполнения вместо старых компилятора и среды выполнения, известных как View Engine.
+  - https://www.youtube.com/watch?v=8fUKZm6WOxY
+    - Уменьшение бандлов (15%)
+    - появилась поддержка tree shaking;
+    - улуч тестинг - ошибки четче
+    - усорилось запуск тестов
+    - поддурка typeScipt
+    - 
+
+---
+
+
+# 00. Angular. Testing. Unit (required level 3)
 
 **level 1:**  
 
@@ -257,36 +314,6 @@ platformBrowserDynamic().bootstrapModule(AppModule, { ngZone: 'noop' })
 
 - Testing directives;
 - Testing pipes;
-
----
-
-# 41. Angular. Extra. CLI (required level 2)
-
-**level 1:**  
-
-**level 2:**  
-
-**level 3:**  
-
-- generate, add, build, serve etc
-
-**level 4:**   
-
-- angular.json. What is it about
-
----
-
-# 42. Angular. Extra. Ivy (required level 2)
-
-**level 1:**  
-
-**level 2:**  
-
-**level 3:**  
-
-**level 4:** 
-
-- What is Ivy?
 
 ---
 
