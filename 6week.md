@@ -14,56 +14,55 @@
     Пример с оператором of().
 
     ```
-    of('Hello').subscribe((vl) => console.log(vl));
-      ```
+      of('Hello').subscribe((vl) => console.log(vl));
+    ```
     Пример с new Observable.
 
     ```
-    const obs = new Observable((sub) => {
-      sub.next(1);
+      const obs = new Observable((sub) => {
+        sub.next(1);
 
-      setTimeout(() => {
-        sub.next(3);
-        sub.complete();
-      }, 500);
-    });
+        setTimeout(() => {
+          sub.next(3);
+          sub.complete();
+        }, 500);
+      });
 
-    obs.subscribe((vl) => console.log(vl));
+      obs.subscribe((vl) => console.log(vl));
       ```
 - What is Subject;
       Subject является разновидностью объектов Observable. Особенность Subject в том, что он может отправлять данные одновременно множеству "потребителей" (multicasetd), которые могут регистрироваться уже в процессе исполнения Subject, в то время как исполнение стандартного Observable осуществляется уникально (uniquecasted) для каждого его вызова.   
       >Объекты RxJS Subject реализуют принцип работы событий, поддерживая возможность регистрировать неограниченное количество обработчиков отправляемых ими данных.   
-
       ```
-      const sbj = new Subject<number>();
+        const sbj = new Subject<number>();
 
-      sbj.subscribe((vl) => console.log(`1st: ${vl}`));
-      sbj.next(3);
-      sbj.subscribe((vl) => console.log(`2nd: ${vl}`));
-      sbj.next(9);
+        sbj.subscribe((vl) => console.log(`1st: ${vl}`));
+        sbj.next(3);
+        sbj.subscribe((vl) => console.log(`2nd: ${vl}`));
+        sbj.next(9);
 
-      /*
-      Результат  в консоли:
+        /*
+        Результат  в консоли:
 
-      1st: 3
-      1st: 9
-      2nd: 9
+        1st: 3
+        1st: 9
+        2nd: 9
       */
       ```
-  
+
 - Promise vs Observable - Promise выполнили один раз и уничтожили данные, Observable - это стрим , кторый можно использовать много раз.;
-- Pipe operator;
-- Name a few operators that you have used;
+- Pipe operator- может вызываться для одной или нескольких функций, каждая из которых может принимать один аргумент ("UnaryFunction") и использовать его для возврата значения.;
+- Name a few operators that you have used (take(), takeWhile(), takeUntill(), tap(), of(), from(), fromEvent(), interval(), filter(), map(), reduce(), catchError(), retry(), delay() 
 
 **level 2:**  
 
 - Types of Subjects;
-    >   В RxJS имеется несколько разновидностей Subject:    
+    В RxJS имеется несколько разновидностей Subject:    
     >  - BehaviorSubject -  хранит в себе последнее отправленное им значение. Так, каждому новому обработчику в момент регистрации (вызов subscribe()) будет отправлено >это значение;   
     >  - ReplaySubject - в отличие от BehaviorSubject объекты ReplaySubject способны хранить заданное количество последних значений, которое задается при создании >объекта;   
     >  - AsyncSubject - в случае с AsyncSubject "потребителям" передается только последнее значение объекта и только, когда он завершит свое выполнение (вызов >complete());   
     >  - AvoidSubject - если не надо выбаваить ничего а сообщить что стрим закончился (пример).
-- What do you need to unsubscribe from, and why not;
+- What do you need to unsubscribe from, and why not - memory leacks - потери памяти при неиспользуемом стриме;
 - What types of unsubscriptions do you know;
   1. Отписаться от стрима через метод unsubscribe()[https://blog.bitsrc.io/6-ways-to-unsubscribe-from-observables-in-angular-ab912819a78f];
   1. Опрераторы take() и first():     
@@ -73,7 +72,13 @@
   * first() - если без аргументов то выдаст первое приходящее значение. если first(val => val === 5) - получим только 5.
   * 
 - Difference between takeWhile and takeUntil;
-- What are the operators of creation, combination, transformation, error handling;
+  - Используйте takeUntil, когда какое-то внешнее событие указывает на то, что пришло время отказаться от подписки. 
+  - Используйте takeWhile, когда входящее значение достигает условия, определенного для отказа от подписки.
+- What are the operators of:   
+  - creation(of(), for(), fromEvent()), 
+  - combination (joinFork() - оператор лучше всего использовать, когда у вас есть группа наблюдаемых и вас интересует только конечное испускаемое значение каждого из них. Один из распространенных вариантов использования этого — если вы хотите отправить несколько запросов при загрузке страницы (или каком-то другом событии) и хотите действовать только после получения ответа для всех. Таким образом, это похоже на то, как вы можете использовать Promise.all.  zip()  - выдаст массив знаений после получения последнего); CombineLatest(streams$) - выдаст массив последних значений стримов при выдаче одного из них) 
+  - transformation(map(), filter(), ), 
+  - error handling (catchError(), retry());
 
 **level 3:**  
 
@@ -81,7 +86,7 @@
   ***Cold Observable (lazy) (unicated)*** - начинают передовать данные только когда мы подпишимся(выполним метод subscribe()) на них. Каждый subscribe() создает отдельный контекст выполнения Observable (пример с получением Math.random - каждый subscribe() вернет разное значение). Создает и активирует данные в Observable;  
   ***Hot observeable (multycasted)*** - получают данные всегда, независмо сделали мы подписку или нет (subscribe()). Создает и активирует данные вне Observable;   
   ***Warm observeable (подогретый)*** - cold observable можно подогреть. Используя оператор multicasted() куда мы передвем Subject(). Затем объединяем два стрима с помощью метожа connect();   
-- How to make hot from cold;
+- How to make hot from cold (multicasted, lazy - не рабаотет без cubscribe() ) - через использование операторов share(), publish();
 - Difference between withLatesFrom, zip, combineLatest, forkJoin, exhaustMap, switchMap, mergeMap;
 - Operators multicast, publish, publishReplay, PublishLast, share;
 
