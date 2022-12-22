@@ -35,8 +35,8 @@ export class DataService {
 - List of configs that can be passed in options;
   ```
     options: {
-    headers?: HttpHeaders | {[header: string]: string | string[]},
-    observe?: 'body' | 'events' | 'response',
+    headers?: HttpHeaders | {[header: string]: string | string[]}, - какую часть ответа следует вернуть
+    observe?: 'body' | 'events' | 'response', - какую часть ответа следует вернуть
     params?: HttpParams|{[param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>},
     reportProgress?: boolean,
     responseType?: 'arraybuffer'|'blob'|'json'|'text',
@@ -58,15 +58,38 @@ export class DataService {
 **level 3:**  
 
 - Requesting non-JSON data
+  ```
+  this.http.get(filename, {responseType: 'text'})
+  ```
 
 **level 4:**  
 
 - Adding and updating headers;
+  - https://angular.io/guide/http#adding-and-updating-headers
+  >Многие серверы требуют дополнительных заголовков для операций сохранения. Например, серверу может потребоваться токен авторизации или заголовок «Content-Type», чтобы явно объявить MIME-тип тела запроса.
+  ***Adding headers***
+  ```
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      Authorization: 'my-auth-token'
+    })
+  };
+  ```
+  ***Updating headers***
+  >Вы не можете напрямую изменить существующие заголовки в предыдущем объекте параметров, поскольку экземпляры класса HttpHeaders являются неизменяемыми. Вместо этого используйте метод set(), чтобы вернуть клон текущего экземпляра с примененными новыми изменениями.
+  ```
+  httpOptions.headers =
+  httpOptions.headers.set('Authorization', 'my-new-auth-token');
+  ```
+
 
 ---
 
-# 43. Angular. HTTP. HTTP interceptors (required level 2)
+# 43. Angular. HTTP. HTTP interceptors (required level 2)   
 
+https://angular.io/guide/http#intercepting-requests-and-responses
+>Вы объявляете перехватчики, которые проверяют и преобразовывают HTTP-запросы из вашего приложения на сервер. Те же перехватчики также могут проверять и преобразовывать ответы сервера на обратном пути к приложению. Несколько перехватчиков формируют прямую и обратную цепочку обработчиков запросов/ответов.
 **level 1:**  
 -
 
