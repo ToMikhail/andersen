@@ -33,6 +33,7 @@ export class DataService {
 **level 2:**  
 
 - List of configs that can be passed in options;
+  ```
     options: {
     headers?: HttpHeaders | {[header: string]: string | string[]},
     observe?: 'body' | 'events' | 'response',
@@ -41,7 +42,8 @@ export class DataService {
     responseType?: 'arraybuffer'|'blob'|'json'|'text',
     withCredentials?: boolean,
     }
-- Errors handling;
+   ```
+- Errors handling;   
   ***Обработка ошибок***  
   При работе с HttpClient есть можество путей обработать ошибку.
   - 1 способ. У метода subscribe(callback1 - удачный ответ с сервера(response); *callback2 - возращает ошибку, где мы ее можем обработать:* callback3 - когда stream  закончился). =>
