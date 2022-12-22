@@ -86,10 +86,15 @@ export class DataService {
 
 ---
 
-# 43. Angular. HTTP. HTTP interceptors (required level 2)   
+# 43. Angular. HTTP interceptors (required level 2)   
 
 https://angular.io/guide/http#intercepting-requests-and-responses
->Вы объявляете перехватчики, которые проверяют и преобразовывают HTTP-запросы из вашего приложения на сервер. Те же перехватчики также могут проверять и преобразовывать ответы сервера на обратном пути к приложению. Несколько перехватчиков формируют прямую и обратную цепочку обработчиков запросов/ответов.
+>Angular HTTP Interceptor позволяет перехватывать HTTP-запросы перед их отправкой и вносить в них необходимые изменения. То же самое справедливо и для ответов сервера. Вы объявляете перехватчики, которые проверяют и преобразовывают HTTP-запросы из вашего приложения на сервер. Те же перехватчики также могут проверять и преобразовывать ответы сервера на обратном пути к приложению. Несколько перехватчиков формируют прямую и обратную цепочку обработчиков запросов/ответов.
+
+>Наиболее частое их применение — отправка авторизационных данных, логирование и обработка серверных ошибок.
+
+>Создание сервиса начинается с внедрения интерфейса Angular HttpIntrceptor из @angular/common/http и реализации его метода intercept(). intercept() модифицирует исходный запрос и возвращает объект Observable события HttpEvent<any>, который в свою очередь возвращает метод next() объекта типа HttpRequest.
+
 **level 1:**  
 -
 
@@ -100,10 +105,12 @@ https://angular.io/guide/http#intercepting-requests-and-responses
 **level 3:**  
 
 - Providing for interceptors
+  - https://angular.io/guide/http#provide-the-interceptor
 
 **level 4:**  
 
 - How to implement authorization via interceptor
+  - https://angular.io/guide/http#http-interceptor-use-cases
 ---
 
 # 44. Angular. HTTP. Errors & Retrying (required level 3)
@@ -118,6 +125,7 @@ https://angular.io/guide/http#intercepting-requests-and-responses
 **level 3:**  
 
 - Request retrying
+  - https://angular.io/guide/http#retrying-a-failed-request
 
 **level 4:** 
 
