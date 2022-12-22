@@ -5,13 +5,53 @@
 
 # 42. Angular. HTTP. Request options (required level 4)
 
+***HttpClient***
+  
+  Общение" с сервером Angular осуществляет через REST-подобные запросы. За это отвечает HttpClientModule.  
+  В компонент или сервис (в зависимости от построения архитектуры) импортируется сервис HttpClient.  
+  For example:
+  ```
+  @Injectable()
+export class DataService {
+  constructor(private http: HttpClient) {}
+}
+  ```
+  
+***Методы HTTP запросов***
+  
+  В архитектуре REST API используются разные методы HTTP запросов. Основные:
+  - GET - используется для получения данных с сервера
+  - POST - используется для создания новой записи
+  - PUT - используется для  обновдления существуюшей записи;
+  - DELETE -  используется для удаления записи.
+  
+  >Все методы сервиса HttpClient возвращают тип ***Observable*** это означает, что если при вызове метода, который должен сделать HTTP-запрос, не вызвать метод subscribe(), то ничего не произойдет. Методу subscribe() можно передавать две функции-обработчика, первая выполнится в случае успешного ответа от сервера, вторая - в случае ошибки.
+
 **level 1:**  
 -
 
 **level 2:**  
 
 - List of configs that can be passed in options;
+    options: {
+    headers?: HttpHeaders | {[header: string]: string | string[]},
+    observe?: 'body' | 'events' | 'response',
+    params?: HttpParams|{[param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>},
+    reportProgress?: boolean,
+    responseType?: 'arraybuffer'|'blob'|'json'|'text',
+    withCredentials?: boolean,
+    }
 - Errors handling;
+  ***Обработка ошибок***  
+  При работе с HttpClient есть можество путей обработать ошибку.
+  - 1 способ. У метода subscribe(callback1 - удачный ответ с сервера(response); *callback2 - возращает ошибку, где мы ее можем обработать:* callback3 - когда stream  закончился). =>
+  ```
+  http.get('link').subscribe(res => {}, error => {})
+  ```
+  - 2 способ. Передать в методе pipe(catchError(err => {return throwError(error)}))
+  ```
+  return http('link').pipe(catchError(err => { return throwError(error) }))
+  ```
 
 **level 3:**  
 
