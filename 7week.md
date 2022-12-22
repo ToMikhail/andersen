@@ -66,8 +66,9 @@ export class DataService {
 
 - Adding and updating headers;
   - https://angular.io/guide/http#adding-and-updating-headers
-  >Многие серверы требуют дополнительных заголовков для операций сохранения. Например, серверу может потребоваться токен авторизации или заголовок «Content-Type», чтобы явно объявить MIME-тип тела запроса.   
+  >Многие серверы требуют дополнительных заголовков для операций сохранения. Например, серверу может потребоваться токен авторизации или заголовок «Content-Type», чтобы явно объявить MIME-тип тела запроса.    
   ***Adding headers***
+  
   ```
   const httpOptions = {
     headers: new HttpHeaders({
