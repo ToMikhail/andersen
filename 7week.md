@@ -104,16 +104,58 @@ https://angular.io/guide/http#intercepting-requests-and-responses
 **level 2:**  
 
 - Request body modifying/cloning (interceptors)
+  
+  ```
+    export class NoopInterceptor implements HttpInterceptor {
+
+      intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  
+        const cloned = req.clone( { 
+           headers: req.headres.append('Auth': 'some_randon_token'))
+           }
+  
+        return next.handle(cloned).pipe(
+          .tap((event) => {
+            if(event.type === HTTPEventType.Response) {
+              console.log(event);
+            }
+          }));
+        }
+      }
+  ```
 
 **level 3:**  
 
 - Providing for interceptors
   - https://angular.io/guide/http#provide-the-interceptor
+  
+  >NoopInterceptor — это служба, управляемая системой внедрения зависимостей (DI) Angular. Как и другие службы, вы должны предоставить класс перехватчика, прежде чем приложение сможет его использовать. Поскольку перехватчики являются необязательными зависимостями службы HttpClient, их необходимо предоставлять в том же инжекторе или родительском инжекторе, который предоставляет HttpClient. Перехватчики, предоставляемые после того, как DI создает HttpClient, игнорируются.
 
 **level 4:**  
 
 - How to implement authorization via interceptor
   - https://angular.io/guide/http#http-interceptor-use-cases
+  
+    ```
+      export class AuthInterceptor implements HttpInterceptor {
+
+        constructor(private auth: AuthService) {}
+
+        intercept(req: HttpRequest<any>, next: HttpHandler) {
+          // Get the auth token from the service.
+          const authToken = this.auth.getAuthorizationToken();
+
+          // Clone the request and replace the original headers with
+          // cloned headers, updated with the authorization.
+          const authReq = req.clone({
+            headers: req.headers.set('Authorization', authToken)
+          });
+
+          // send cloned request with header to the next handler.
+          return next.handle(authReq);
+        }
+      }
+  ```
 ---
 
 # 44. Angular. HTTP. Errors & Retrying (required level 3)
@@ -129,10 +171,22 @@ https://angular.io/guide/http#intercepting-requests-and-responses
 
 - Request retrying
   - https://angular.io/guide/http#retrying-a-failed-request
+  >Иногда ошибка носит временный характер и автоматически исчезает при повторной попытке. Например, в мобильных сценариях часто случаются сбои в сети, и повторная попытка может дать успешный результат. Библиотека RxJS предлагает несколько операторов повтора. Например, оператор retry() автоматически повторно подписывается на неудавшийся Observable заданное количество раз. Повторная подписка на результат вызова метода HttpClient приводит к повторной отправке HTTP-запроса. В следующем примере показано, как передать неудачный запрос оператору retry() перед его передачей обработчику ошибок.
+  ```
+    getConfig() {
+    return this.http.get<Config>(this.configUrl)
+      .pipe(
+        retry(3), // retry a failed request up to 3 times
+        catchError(this.handleError) // then handle the error
+      );
+    }
+  ```
 
 **level 4:** 
 
 - Request aborting
+  
+  unsibscribe()
 
 ---
 
