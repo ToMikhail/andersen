@@ -435,7 +435,7 @@ https://angular.io/guide/http#intercepting-requests-and-responses
       return price * (1 - discount);
     }
 
-console.log(applyDiscount(100)); // 95
+    console.log(applyDiscount(100)); // 95
   ```
 
 **level 4:**  
