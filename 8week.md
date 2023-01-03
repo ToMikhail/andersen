@@ -136,6 +136,9 @@ Packages - Пакеты NgRx делятся на несколько основн
 **level 3:**  
 - tslinter/eslinter. Angular and rxjs main linter rules
   - https://cartant.github.io/rxjs-tslint-rules/
+  - @angular-eslint/component-class-suffix
+  - "@angular-eslint/component-selector"
+  - "@angular-eslint/directive-class-suffix"
 
 >Используйте ESLint, чтобы следовать рекомендациям и избегать распространенных ошибок в приложении.
 
