@@ -35,6 +35,23 @@ Angular supports this design pattern and you can use it in your applications to 
 >Dependency injection, or DI, is one of the fundamental concepts in Angular. DI is wired into the Angular framework and allows classes with Angular decorators, such as Components, Directives, Pipes, and Injectables, 
 >to configure dependencies that they need.
 
+Types of injector hierarchies:
+ - ModuleInjector hierarchy - Configure a ModuleInjector in this hierarchy using an @NgModule() or @Injectable() annotation.
+ - ElementInjector hierarchy - Created implicitly at each DOM element. An ElementInjector is empty by default unless you configure it in the providers property on @Directive() or @Component().
+There are two more injectors above root, an additional ModuleInjector and NullInjector().
+
+### Provider   
+A provider is an instruction to the Dependency Injection system on how to obtain a value for a dependency. Most of the time, these dependencies are services that you create and provide.
+
+The provider-definition key can be one of the following:
+ - useClass - this option tells Angular DI to instantiate a provided class when a dependency is injected;
+ - useExisting - allows you to alias a token and reference any existing one.
+ - useFactory - allows you to define a function that constructs a dependency.
+ - useValue - provides a static value that should be used as a dependency.
+
+If you specify the service class as the provider token, the default behavior is for the injector to instantiate that class using the new operator.
+
+
 ##Change detection
 Change detection is the process through which Angular checks to see whether your application state has changed, and if any DOM needs to be updated.  
  At a high level, Angular walks your components from top to bottom, looking for changes. Angular runs its change detection mechanism periodically so that changes to the data model are reflected in an application’s view.   
@@ -42,10 +59,7 @@ Change detection can be triggered either manually or through an asynchronous eve
 
 Change detection is a highly optimized performant, but it can still cause slowdowns if the application runs it too frequently;
 
-Types of injector hierarchies:
- - ModuleInjector hierarchy - Configure a ModuleInjector in this hierarchy using an @NgModule() or @Injectable() annotation.
- - ElementInjector hierarchy - Created implicitly at each DOM element. An ElementInjector is empty by default unless you configure it in the providers property on @Directive() or @Component().
-There are two more injectors above root, an additional ModuleInjector and NullInjector().
+
 
 ### resolution modifiers:
  - @Optional() - allows Angular to consider a service you inject to be optional. This way, if it can't be resolved at runtime, Angular resolves the service as null, rather than throwing an error.
@@ -105,6 +119,16 @@ export class AppRoutingModule { }
  ];
 ```
  3. Add your routes to your application (routerLink and <router-outlet></router-outlet>)
+
+## Preloading Strategy 
+Angular Preloading Strategy is yet another way to speed up the load time of the Angular Apps. We build Modular apps using the Angular Modules. The Angular loads all the modules, when the user requests for the first time. This will make app loading slowly as it need to download all the modules
+
+
+lazy loading - just need to add LoadChildren for root routing module
+
+The Angular provides two built in strategies out of the box. one is PreloadAllModules and other one is NoPreloading:
+ - PreloadAllModules - This strategy will preload all the lazy loaded modules. 
+ - NoPreloading - This will disables all the preloading. This is default behavior i.e. if you don not specify the preloadingStrategy, then the angular assumes you do not want preloading
 
 ##Guards
 The Angular router’s navigation guards allow to grant or remove access to certain parts of the navigation. Another route guard, the CanDeactivate guard, even allows you to prevent a user from accidentally leaving a component with unsaved changes.  
