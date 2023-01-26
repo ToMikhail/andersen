@@ -51,6 +51,12 @@ The provider-definition key can be one of the following:
 
 If you specify the service class as the provider token, the default behavior is for the injector to instantiate that class using the new operator.
 
+### resolution modifiers:
+ - @Optional() - allows Angular to consider a service you inject to be optional. This way, if it can't be resolved at runtime, Angular resolves the service as null, rather than throwing an error.
+ - @SkipSelf() - With @SkipSelf(), Angular starts its search for a service in the parent ElementInjector, rather than in the current one.
+ - @Host() - @Host() lets you designate a component as the last stop in the injector tree when searching for providers. Even if there is a service instance further up the tree, Angular won't continue looking Use @Host() as follows;
+ - @Self() - Use @Self() so that Angular will only look at the ElementInjector for the current component or directive
+
 
 ## Change detection
 Change detection is the process through which Angular checks to see whether your application state has changed, and if any DOM needs to be updated.  
@@ -59,13 +65,11 @@ Change detection can be triggered either manually or through an asynchronous eve
 
 Change detection is a highly optimized performant, but it can still cause slowdowns if the application runs it too frequently;
 
+2 types of Change Detection Strotegy: 
+ - Default - run Change detection through any changes;
+ - onPush - run Change detection only when was changed value( immutable changes) or happen user events or mannually (detectChanges(), markFo Check, Application.tick()); 
+Use OnPush strategy if your objects are immutable and you don't change the state of the objects in your component. It will perform better rather than default where each change of the object makes run change detector to resolve changes
 
-
-### resolution modifiers:
- - @Optional() - allows Angular to consider a service you inject to be optional. This way, if it can't be resolved at runtime, Angular resolves the service as null, rather than throwing an error.
- - @SkipSelf() - With @SkipSelf(), Angular starts its search for a service in the parent ElementInjector, rather than in the current one.
- - @Host() - @Host() lets you designate a component as the last stop in the injector tree when searching for providers. Even if there is a service instance further up the tree, Angular won't continue looking Use @Host() as follows;
- - @Self() - Use @Self() so that Angular will only look at the ElementInjector for the current component or directive
 
 ### Zone.js
 Zone.js is a signaling mechanism that Angular uses to detect when an application state might have changed. It captures asynchronous operations like setTimeout, network requests, and event listeners. 
