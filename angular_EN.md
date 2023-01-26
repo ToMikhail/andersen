@@ -163,7 +163,7 @@ The main difference is that a cold observable creates a data producer for each s
 
 For creatinf Warm Obsevable we should use multicast operator.
 
-###Subject
+### Subject
 What is a Subject? An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers.
 
   - BehaviorSubject - One of the variants of Subjects is the BehaviorSubject, which has a notion of "the current value". It stores the latest value emitted to its consumers, and whenever a new Observer subscribes, it will immediately receive the "current value" from the BehaviorSubject.
