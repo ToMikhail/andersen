@@ -77,7 +77,7 @@ Angular schedules change detection based on signals from Zone.js
 In such cases, you can instruct Angular to avoid calling change detection for tasks scheduled by a given piece of code using NgZone
 
 
-##Life cycle hooks
+## Life cycle hooks
 A component instance has a lifecycle that starts when Angular instantiates the component class and renders the component view along with its child views. The lifecycle continues with change detection, as Angular checks to see when data-bound properties change, and updates both the view and the component instance as needed. The lifecycle ends when Angular destroys the component instance and removes its rendered template from the DOM. Directives have a similar lifecycle, as Angular creates, updates, and destroys instances in the course of execution.
  - ngOnChanges - When an input or output binding value changes.
  - ngOnInit - After the first ngOnChanges.
