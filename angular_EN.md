@@ -134,7 +134,7 @@ The Angular provides two built in strategies out of the box. one is PreloadAllMo
  - PreloadAllModules - This strategy will preload all the lazy loaded modules. 
  - NoPreloading - This will disables all the preloading. This is default behavior i.e. if you don not specify the preloadingStrategy, then the angular assumes you do not want preloading
 
-##Guards
+## Guards
 The Angular router’s navigation guards allow to grant or remove access to certain parts of the navigation. Another route guard, the CanDeactivate guard, even allows you to prevent a user from accidentally leaving a component with unsaved changes.  
   
 Here are the 4 types of routing guards available:
