@@ -6,4 +6,4 @@
 # [6 week](https://github.com/ToMikhail/andersen/blob/main/6week.md)
 # [7 week](https://github.com/ToMikhail/andersen/blob/main/7week.md)
 # [8 week](https://github.com/ToMikhail/andersen/blob/main/8week.md)
-# [8 week](https://github.com/ToMikhail/andersen/blob/main/NodeJS.md)
+# [NodeJS](https://github.com/ToMikhail/andersen/blob/main/NodeJS.md)
