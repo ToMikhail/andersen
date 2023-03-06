@@ -5,8 +5,9 @@ ___
 
    ***level 1:*** 
    
-   - ;
-   - 
+   - ***http module***. Basic understanding of http module, it's  purpose and details;
+   - ***timers api***. Basics of timers api, difference between browser and node api
+   
    ***level 2:***
    
    -  
