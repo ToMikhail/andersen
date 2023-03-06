@@ -6,17 +6,24 @@ ___
    ***level 1:*** 
    
    - ***http module***. Basic understanding of http module, it's  purpose and details;
-   - ***timers api***. Basics of timers api, difference between browser and node api
+   - ***timers api***. Basics of timers api;
+   - difference between ***browser and node api***;
    
    ***level 2:***
    
-   -  
+   - Basics of file system api, how to work with files;
+   - Understanding of Event Based approach, Events API
+   
    ***level 3 (required):***
    
-   - 
+   - Basics of "process" and node js process module;
+   - Basics of child process module, knowledge of creating/managing this processes;
+   - Basics of Error and error handling for Node API;
+   
    ***level 4:***
    
-   - 
+   - Basics of cluster module and it's practical usage;
+   - Basics of Streams API, where to use, specification of Streams;
 
 
 ___
