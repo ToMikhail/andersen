@@ -51,10 +51,10 @@ ref()
    - Basics of file system api, how to work with files;    
    >есть два типа методоы: Synс и async. Sync не рекомендуется использовать(не блокирует поток). 
    
-  *  fs.mkdir(path.join(__dirname, 'folder-name'), err => {}) - для создания папки.
-  *  fs.writeFile(path.join(__dirname, 'folder-name'), err => {}) - для создания файла. Каждый раз файл бедт перезаписываться
-  *  fs.appendFile(path.join(__dirname, 'folder-name'), err => {}) - для ставки контента в файл
-  *  fs.writeFile(path.join(__diname, ''folder-name'', 'file-name.txt'), (err, data) => {}) - для чтения файлов. Данные приходят в буфере (часятим). Что бы полчить нормальный формат необходимо вторым прпметром указать кодировку 'utf-8', или трансформировать данные через метод Buffer.from(data).toString()
+	  *  fs.mkdir(path.join(__dirname, 'folder-name'), err => {}) - для создания папки.
+	  *  fs.writeFile(path.join(__dirname, 'folder-name'), err => {}) - для создания файла. Каждый раз файл бедт перезаписываться
+	  *  fs.appendFile(path.join(__dirname, 'folder-name'), err => {}) - для ставки контента в файл
+	  *  fs.writeFile(path.join(__diname, ''folder-name'', 'file-name.txt'), (err, data) => {}) - для чтения файлов. Данные приходят в буфере (часятим). Что бы полчить нормальный формат необходимо вторым прпметром указать кодировку 'utf-8', или трансформировать данные через метод Buffer.from(data).toString()
    
   ```
    fs.mkdir(path.join(__dirname, 'folder-name'), err => {
