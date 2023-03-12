@@ -34,6 +34,35 @@ Node.js — не отдельный язык программирования, �
    >Идея проста — объекты-эмиттеры отправляют именованные события, которые запускают уже зарегистрированных слушателей. Следовательно, объект-эмиттер имеет две ключевые характеристики:
   * Генерация событий name: Сигнал о том, что что-то произошло, называется генерацией события. Причиной этого состояния часто является изменение состояния излучающего объекта. 
   * Регистрация и отмена регистрации функций прослушивателя: это относится к привязке и отвязке функций обратного вызова с соответствующими им событиями.
+  ```
+  // Import the 'events' module
+const events = require('events');
+
+// Instantiate an EventEmitter object
+const eventEmitter = new events.EventEmitter();
+
+// Handler associated with the event
+const connectHandler = function connected() {
+	console.log('Connection established.');
+
+	// Trigger the corresponding event
+	eventEmitter.emit('data_received');
+}
+
+// Binds the event with handler
+eventEmitter.on('connection', connectHandler);
+
+// Binds the data received
+eventEmitter.on(
+	'data_received', function () {
+		console.log('Data Transfer Successful.');
+	});
+
+// Trigger the connection event
+eventEmitter.emit('connection');
+
+console.log("Finish");
+  ```
    
    ***level 3 (required):***
    
