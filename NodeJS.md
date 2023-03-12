@@ -3,6 +3,8 @@ ___
 
 # 1. Node.js API (required level 3)   
 
+Node.js — не отдельный язык программирования, а платформа для использования JavaScript на стороне сервера. Если говорить о языке, то как для фронденда, так и для бэкенда используется один и тот же JavaScript. Разница только в наборе API, которые используют фронтендеры и бэкендеры.
+
    ***level 1:*** 
    
    - ***http module***. Basic understanding of http module, it's  purpose and details;
@@ -11,8 +13,27 @@ ___
    
    ***level 2:***
    
-   - Basics of file system api, how to work with files;
-   - Understanding of Event Based approach, Events API
+   - Basics of file system api, how to work with files;    
+   >есть два типа методоы: Synс и async. Sync не рекомендуется использовать(не блокирует поток). 
+   
+     *  fs.mkdir(path.join(__dirname, 'folder-name'), err => {}) - для создания папки.
+     *  fs.writeFile(path.join(__dirname, 'folder-name'), err => {}) - для создания файла. Каждый раз файл бедт перезаписываться
+     *  fs.appendFile(path.join(__dirname, 'folder-name'), err => {}) - для ставки контента в файл
+     * fs.writeFile(path.join(__diname, ''folder-name'', 'file-name.txt'), (err, data) => {}) - для чтения файлов. Данные приходят в буфере (часятим). Что бы полчить нормальный формат необходимо вторым прпметром указать кодировку 'utf-8', или трансформировать данные через метод Buffer.from(data).toString()
+   
+  ```
+   fs.mkdir(path.join(__dirname, 'folder-name'), err => {
+    if (err) throw new Error(err)
+     console.log('папка создана')
+     })
+   ```
+   
+   
+   - Understanding of Event Based approach, Events API   
+   >При сиздании класса делаем extands EventEmmiter который под капотом имеет два метода on() и emmit(). 
+   >Идея проста — объекты-эмиттеры отправляют именованные события, которые запускают уже зарегистрированных слушателей. Следовательно, объект-эмиттер имеет две ключевые характеристики:
+    * Генерация событий name: Сигнал о том, что что-то произошло, называется генерацией события. Причиной этого состояния часто является изменение состояния излучающего объекта. 
+    * Регистрация и отмена регистрации функций прослушивателя: это относится к привязке и отвязке функций обратного вызова с соответствующими им событиями.
    
    ***level 3 (required):***
    
