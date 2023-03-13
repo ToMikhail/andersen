@@ -227,15 +227,15 @@ ___
   
   -  Knowledge of commands for the listed operations;
 >Оператор CREATE TABLE используется для создания новой таблицы в базе данных.
-> CREATE DATABASE - Оператор используется для создания новой базы данных SQL.
->DROP TABLE используется для удаления существующей таблицы в базе данны
->SELECT используется для выбора данных из базы данных.(SELECT column1, column2, ... FROM table_name;)
->INSERT INTO используется для вставки новых записей в таблицу. INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
->DELETE Оператор DELETE используется для удаления существующих записей в таблице. DELETE FROM table_name WHERE condition;
->ALTER TABLE используется для добавления, удаления или изменения столбцов в существующей таблице.
->ADD используется для добавления столбца в существующую таблицу.ALTER TABLE Customers ADD Email varchar(255);
->ALTER TABLE - DROP COLUMN - Чтобы удалить столбец в таблице, используйте следующий синтаксис (обратите внимание, что некоторые системы баз данных не позволяют удалять столбец): ALTER TABLE table_name DROP COLUMN column_name;
->ALTER TABLE - RENAME COLUMN - ALTER TABLE table_name RENAME COLUMN old_name to new_name;
+>- CREATE DATABASE - Оператор используется для создания новой базы данных SQL.
+>- DROP TABLE используется для удаления существующей таблицы в базе данны
+>- SELECT используется для выбора данных из базы данных.(SELECT column1, column2, ... FROM table_name;)
+>- INSERT INTO используется для вставки новых записей в таблицу. INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
+>- DELETE Оператор DELETE используется для удаления существующих записей в таблице. DELETE FROM table_name WHERE condition;
+>- ALTER TABLE используется для добавления, удаления или изменения столбцов в существующей таблице.
+>- ADD используется для добавления столбца в существующую таблицу.ALTER TABLE Customers ADD Email varchar(255);
+>- ALTER TABLE - DROP COLUMN - Чтобы удалить столбец в таблице, используйте следующий синтаксис (обратите внимание, что некоторые системы баз данных не позволяют удалять столбец): ALTER TABLE table_name DROP COLUMN column_name;
+>- ALTER TABLE - RENAME COLUMN - ALTER TABLE table_name RENAME COLUMN old_name to new_name;
 
 
   ***level 3 (required):***
@@ -245,11 +245,12 @@ ___
   ***level 4:***
   
   - Understanding indexes;
-  > CREATE INDEX используется для создания индексов в таблицах.
-  > Индексы используются для более быстрого извлечения данных из базы данных. Пользователи не могут видеть индексы, они просто используются для ускорения поиска/запросов.
-  > Обновление таблицы с индексами занимает больше времени, чем обновление таблицы без индексов (поскольку индексы также нуждаются в обновлении). Поэтому создавайте индексы только для тех столбцов, по которым будет часто выполняться поиск.
-  > CREATE INDEX index_name ON table_name (column1, column2, ...);
-  > The DROP INDEX statement is used to delete an index in a table.
+  >CREATE INDEX используется для создания индексов в таблицах.
+  >Индексы используются для более быстрого извлечения данных из базы данных. Пользователи не могут видеть индексы, они просто используются для ускорения поиска/запросов.
+  >Обновление таблицы с индексами занимает больше времени, чем обновление таблицы без индексов (поскольку индексы также нуждаются в обновлении). Поэтому создавайте индексы только для тех столбцов, по которым будет часто выполняться поиск.
+  >CREATE INDEX index_name ON table_name (column1, column2, ...);
+  >The DROP INDEX statement is used to delete an index in a table.
+
   - What the indexes are used for;
   - How indexes work
   >Индексация — это способ сортировки ряда записей по нескольким полям. Создание индекса для поля в таблице создает другую структуру данных, которая содержит значение поля и указатель на запись, к которой оно относится. Затем эта структура индекса сортируется, что позволяет выполнять в ней двоичный поиск.
