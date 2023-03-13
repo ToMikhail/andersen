@@ -149,9 +149,10 @@ console.log("Finish");
 
 >Для удобства child_process модуль предоставляет несколько синхронных и асинхронных альтернатив child_process.spawn() а также child_process.spawnSync(). Каждая из этих альтернатив реализована поверх child_process.spawn() или child_process.spawnSync().
 
->child_process.exec(): порождает оболочку и запускает команду в этой оболочке, передавая stdout а также stderr в функцию обратного вызова по завершении.
->child_process.execFile(): похожий на child_process.exec() за исключением того, что он порождает команду напрямую, без предварительного создания оболочки по умолчанию.
->child_process.fork(): порождает новый процесс Node.js и вызывает указанный модуль с установленным каналом связи IPC, который позволяет отправлять сообщения между родителем и потомком.
+>child_process.exec(): порождает оболочку и запускает команду в этой оболочке, передавая stdout а также stderr в функцию обратного вызова по завершении.   
+>child_process.execFile(): похожий на child_process.exec() за исключением того, что он порождает команду напрямую, без предварительного создания оболочки по умолчанию.   
+>child_process.fork(): порождает новый процесс Node.js и вызывает указанный модуль с установленным каналом связи IPC, который позволяет отправлять сообщения между родителем и потомком.  
+
 >child_process.execSync(): синхронная версия child_process.exec() который заблокирует цикл событий Node.js.
 >child_process.execFileSync(): синхронная версия child_process.execFile() который заблокирует цикл событий Node.js.
 
@@ -225,16 +226,16 @@ ___
   ***level 2:***
   
   -  Knowledge of commands for the listed operations;
-  > Оператор CREATE TABLE используется для создания новой таблицы в базе данных.
-  > CREATE DATABASE - Оператор используется для создания новой базы данных SQL.
-  > DROP TABLE используется для удаления существующей таблицы в базе данны
-  > SELECT используется для выбора данных из базы данных.(SELECT column1, column2, ... FROM table_name;)
-  > INSERT INTO используется для вставки новых записей в таблицу. INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
-  > DELETE Оператор DELETE используется для удаления существующих записей в таблице. DELETE FROM table_name WHERE condition;
-  > ALTER TABLE используется для добавления, удаления или изменения столбцов в существующей таблице.
-  > ADD используется для добавления столбца в существующую таблицу.ALTER TABLE Customers ADD Email varchar(255);
-  > ALTER TABLE - DROP COLUMN - Чтобы удалить столбец в таблице, используйте следующий синтаксис (обратите внимание, что некоторые системы баз данных не позволяют удалять столбец): ALTER TABLE table_name DROP COLUMN column_name;
-  > ALTER TABLE - RENAME COLUMN - ALTER TABLE table_name RENAME COLUMN old_name to new_name;
+>Оператор CREATE TABLE используется для создания новой таблицы в базе данных.
+> CREATE DATABASE - Оператор используется для создания новой базы данных SQL.
+>DROP TABLE используется для удаления существующей таблицы в базе данны
+>SELECT используется для выбора данных из базы данных.(SELECT column1, column2, ... FROM table_name;)
+>INSERT INTO используется для вставки новых записей в таблицу. INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
+>DELETE Оператор DELETE используется для удаления существующих записей в таблице. DELETE FROM table_name WHERE condition;
+>ALTER TABLE используется для добавления, удаления или изменения столбцов в существующей таблице.
+>ADD используется для добавления столбца в существующую таблицу.ALTER TABLE Customers ADD Email varchar(255);
+>ALTER TABLE - DROP COLUMN - Чтобы удалить столбец в таблице, используйте следующий синтаксис (обратите внимание, что некоторые системы баз данных не позволяют удалять столбец): ALTER TABLE table_name DROP COLUMN column_name;
+>ALTER TABLE - RENAME COLUMN - ALTER TABLE table_name RENAME COLUMN old_name to new_name;
 
 
   ***level 3 (required):***
