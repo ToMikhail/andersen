@@ -28,10 +28,12 @@ Node.js — не отдельный язык программирования, �
    ```
    
    - ***timers api***. Basics of timers api;
->Setting Node.js timer functions
+>Setting Node.js timer functions:   
+
 >- setTimeout()
 >- setInterval()
->- setImmediate()
+>- setImmediate();   
+
 >Clearing Node.js timer functions
 >- clearTimeout()
 >- clearInterval()
