@@ -29,13 +29,13 @@ Node.js — не отдельный язык программирования, �
    
    - ***timers api***. Basics of timers api;
 >Setting Node.js timer functions
->setTimeout()
->setInterval()
->setImmediate()
->>Clearing Node.js timer functions
->clearTimeout()
->clearInterval()
->clearImmediate() - функция setImmediate() будет запущена после завершения всего исполняемого кода. Функция setImmediate() запускает код после завершения текущего цикла цикла обработки событий. setImmediate() похож на setTimeout() с задержкой 0 мс.
+>- setTimeout()
+>- setInterval()
+>- setImmediate()
+>Clearing Node.js timer functions
+>- clearTimeout()
+>- clearInterval()
+>- clearImmediate() - функция setImmediate() будет запущена после завершения всего исполняемого кода. Функция setImmediate() запускает код после завершения текущего цикла цикла обработки событий. setImmediate() похож на setTimeout() с задержкой 0 мс.
 >Other Node.js timer functions
 >unref()
 >ref()
