@@ -266,6 +266,86 @@ ___
   ***level 2:***
   
   -  Knowledge of operator groups (DML, DCL, TCL, DDL)
+ >1. Data Definition Language(DDL) - которые можно использовать для разработки структуры базы данных.:
+ > * CREATE Command - Эта команда создает базу данных или ее объекты (такие как таблица, индекс, функция, представления, процедура хранения и триггеры). В SQL есть два типа операторов CREATE: один для создания базы данных, а другой для таблицы.
+ > 
+ > ```
+ > Syntax: CREATE DATABASE db_name;
+ > db_name : name of the database(any name can be given) 
+ >
+ > Example: CREATE TABLE Employee(Emp_Name VARCHAR2(20), DOB DATE, Mobile INT(10), Email VARCHAR2(20));
+ >  ```
+ > * DROP Command - может использоваться для удаления всей базы данных или просто таблицы, что означает, что все данные также будут удалены. Оператор DROP удаляет существующие объекты, такие как базы данных, таблицы, индексы и представления.
+ >  ```
+ >  Syntax: For dropping table: DROP TABLE table_name;
+ >  For dropping database: DROP DATABASE db_name;
+ >  ```
+ > * ALTER Command - В существующей таблице эта команда используется для добавления, удаления/удаления или редактирования столбцов. Его также можно использовать для создания и удаления ограничений из уже существующей таблицы.
+ >  ```
+ >  To add a new column:
+ > Syntax: ALTER TABLE table_name ADD column_name COLUMN-definition;
+ > Example: ALTER TABLE Employee ADD Address VARCHAR2(20);
+ > 
+ > To modify the existing column:
+ > Syntax: ALTER TABLE MODIFY(COLUMN DEFINITION….);
+ > Example: ALTER TABLE Employee MODIFY(Emp_Name VARCHAR2(25));
+ . The above command will modify the ‘Emp_Name’ column to data type VARCHAR2 with size 25.
+ >  ```
+ > * TRUNCATE Command - используется для указания экстентов таблицы для освобождения (пусто для повторного использования). Эта процедура быстро удаляет все данные из таблицы, обычно обходя ряд процессов проверки целостности. Он впервые был включен в стандарт SQL:2008. Это несколько эквивалентно команде удаления.
+ >  ```
+ >  Syntax: TRUNCATE TABLE  table_name;
+ > Example: TRUNCATE TABLE Employee;
+
+ > The above command will delete the data from the ‘Employee’ table but not the table.
+ >  ```
+
+ > 2. DML (Data Manipulation Language) - Это часть инструкции SQL, которая регулирует, кто имеет доступ к данным и базе данных. Операторы DCL сгруппированы вместе с операторами DML. Команда DML не фиксируется автоматически, что означает, что она не может постоянно сохранять все изменения базы данных. У них есть возможность откатиться назад.
+ > * INSERT Command - Используется для вставки данных в строку таблицы.:
+ > ```
+ > Example: INSERT INTO Employee(Emp_Name, DOB, Mobile, Email)
+ > VALUES(‘Joe’, ‘1995-02-16’, 7812865845, ‘joe@gmail.com’);
+ >The above command will insert the mentioned values in the ‘Employee’ table.
+ > ```
+ > * UPDATE Command - используется для обновления данных в существующей таблице базы данных. Мы можем использовать оператор Alter для обновления одного или нескольких столбцов в зависимости от наших потребностей.
+ >  ```
+ > Example: UPDATE Employee SET Mobile=9935467903 WHERE Emp_Name=’Joe’;
+ > ```
+ > Оператор SET используется в приведенном выше запросе для присвоения новых значений определенному столбцу, а предложение WHERE используется для выбора строк, для которых необходимо изменить столбцы. Если мы не используем предложение WHERE, все столбцы строк будут обновлены. В результате предложение WHERE используется для выбора определенных строк.
+ > * DELETE Command - используется для удаления записей из таблицы. В зависимости от условия, которое мы установили в предложении WHERE, мы можем удалить одну запись или несколько записей.
+ > ```
+ > Example: DELETE FROM Employee WHERE Emp_Name=’Joe’;
+ > ```
+ > 3. Data Control Language(DCL)- позволяет пользователям извлекать и редактировать данные, хранящиеся в базах данных. Типы команд языка управления данными включают Grant и Revoke.
+ > * GRANT Command - Эта команда дает права доступа пользователя к базе данных. Его можно использовать для предоставления привилегий SELECT, INSERT, UPDATE и DELETE пользователю в одной или нескольких таблицах.
+ > ```
+ > Example: GRANT INSERT, SELECT on accounts to Alex
+ > ```
+ > С помощью этой команды Алексу были предоставлены разрешения на объекты базы данных учетных записей, такие как он может запрашивать или вставлять в учетные записи.
+ > * REVOKE Command - Чтобы отозвать разрешения у пользователя, используется команда REVOKE. Он используется для отзыва привилегии (по умолчанию) или конкретной команды, такой как UPDATE или DELETE, в зависимости от ситуации.:
+ > ```
+ > Example: REVOKE INSERT, SELECT on accounts from John
+ > ```
+ > С помощью этой команды были удалены разрешения Джона, такие как запрос или вставка в объекты базы данных учетных записей.
+ > 4.Transaction Control Language(TCL) - используются в базе данных для управления транзакциями. Эта команда используется для обработки модификаций операторов DML. TCL позволяет объединять ваши операторы в логические транзакции.
+ > * COMMIT Command - Для сохранения всех транзакций в базе данных используется Commit.
+ > ```
+ > Example: UPDATE Employee SET DOB=’1995-02-17’ WHERE Emp_Name=’Joe’;
+ > COMMIT;
+This example will insert the dob in the table which have name = Joe and then COMMIT the changes in the database.
+ > ```
+ > * ROLLBACK Command - Все изменения должны быть отменены, если какой-либо из сгруппированных операторов SQL приводит к ошибке. Термин «откат» относится к процессу отмены изменений. Эту команду можно использовать только для отмены транзакций, которые произошли после последней команды COMMIT или ROLLBACK.
+ > ```
+ > Example: UPDATE Employee SET DOB=’1995-02-17’ WHERE Emp_Name=’Joe’;
+ > ROLLBACK;
+ >  Этот пример вставит доб в таблицу с именем = Джо, а затем отменит изменения в базе данных. Таким образом, эта операция не повлияет на таблицу.
+ > ```
+ >
+ > * SAVEPOINT Command - для отката транзакции до определенной точки, а не для полной транзакции. Среди всех транзакций эта команда используется исключительно для создания SAVEPOINT.
+ > ```
+ > Example: SAVEPOINT S1; //savepoint created
+ > DELETE FROM Employee WHERE Emp_Name = ‘Joe’; //deleted 
+ > SAVEPOINT S2; //Savepoint created.
+ > ```
 
 
   ***level 3 (required):***
