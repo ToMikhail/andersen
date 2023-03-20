@@ -289,13 +289,12 @@ ___
  > To modify the existing column:
  > Syntax: ALTER TABLE MODIFY(COLUMN DEFINITION….);
  > Example: ALTER TABLE Employee MODIFY(Emp_Name VARCHAR2(25));
- . The above command will modify the ‘Emp_Name’ column to data type VARCHAR2 with size 25.
+ > The above command will modify the ‘Emp_Name’ column to data type VARCHAR2 with size 25.
  >  ```
  > * TRUNCATE Command - используется для указания экстентов таблицы для освобождения (пусто для повторного использования). Эта процедура быстро удаляет все данные из таблицы, обычно обходя ряд процессов проверки целостности. Он впервые был включен в стандарт SQL:2008. Это несколько эквивалентно команде удаления.
  >  ```
- >  Syntax: TRUNCATE TABLE  table_name;
+ > Syntax: TRUNCATE TABLE  table_name;
  > Example: TRUNCATE TABLE Employee;
-
  > The above command will delete the data from the ‘Employee’ table but not the table.
  >  ```
 
@@ -365,7 +364,7 @@ ___
 
   ***level 1:***  
   
-  - What is a request;
+  - What is a request - Запрос — это запрос данных или информации из таблицы базы данных или комбинации таблиц.;
   - How is it initialized
 
 
@@ -377,11 +376,37 @@ ___
   ***level 3 (required):***
   
   - Give an example of sampling with multiple conditions
+  ```
+  SQL> SELECT ID, NAME, SALARY 
+  FROM CUSTOMERS
+  WHERE SALARY > 2000 AND age < 25;
+  ```
+  ```
+  SELECT column1, column2, columnN 
+  FROM table_name
+  WHERE [condition1] OR [condition2]...OR [conditionN]
+  ```
 
   ***level 4:***
   
   - Knowledge of subqueries;
+ > ANY and ALL Operators - операторы позволяют выполнять сравнение между значением одного столбца и диапазоном других значений.
+ > * ANY - означает, что условие будет истинным, если операция верна для любого из значений в диапазоне. в результате возвращает логическое значение возвращает TRUE, если ЛЮБОЕ из значений подзапроса удовлетворяет условию
+ > ```
+ > SELECT column_name(s)
+ > FROM table_name
+ > WHERE column_name operator ANY
+ > (SELECT column_name
+ > FROM table_name
+ > WHERE condition);
+ > ```
+ > * ALL - означает, что условие будет истинным только в том случае, если операция истинна для всех значений в диапазоне.
   - Give an example of a selection with a subquery
+ ```
+ SELECT ProductName 
+ FROM Products
+ WHERE ProductID = ANY (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+ ```
 
 
 ___
@@ -390,8 +415,17 @@ ___
 
   ***level 1:***  
   
-  - What is a transaction;
-  - Transaction concepts (ACID)
+  - What is a transaction -  Если говорить по-научному, то транзакция — упорядоченное множество операций, переводящих базу данных из одного согласованного состояния в другое. Согласованное состояние — это состояние, которое подходит под бизнес-логику системы. То есть у нас не остается отрицательный баланс после перевода денег, номер счета не «зависает в воздухе», не привязанный к человеку, и тому подобное. Это набор операций по работе с базой данных (БД), объединенных в одну атомарную пачку; Транзакционные базы данных (базы, работающие через транзакции) выполняют требования ACID, которые обеспечивают безопасность данных. В том числе финансовых данных =) Поэтому разработчики их и выбирают.
+> Как закрыть транзакцию
+>Тут есть 2 варианта:
+>COMMIT — подтверждаем все внесенные изменения;
+>ROLLBACK — откатываем их;
+  - https://habr.com/ru/post/537594/#wtf_transaction
+  - Transaction concepts (ACID) - ACID (от англ. atomicity, consistency, isolation, durability) — набор требований к транзакционной системе, обеспечивающий наиболее надёжную и предсказуемую её работу — атомарность[⇨], согласованность[⇨], изоляция[⇨], устойчивость[⇨
+> * Атомарность гарантирует, что никакая транзакция не будет зафиксирована в системе частично. Будут либо выполнены все её подоперации, либо не выполнено ни одной.
+> * Согласованность - Транзакция, достигающая своего нормального завершения (англ. end of transaction, EOT) и тем самым фиксирующая свои результаты, сохраняет согласованность базы данных.
+> * Изоляция - Во время выполнения транзакции параллельные транзакции не должны оказывать влияния на её результат. Изолированность — требование дорогое, поэтому в реальных базах данных существуют режимы, не полностью изолирующие транзакцию (уровни изолированности, допускающие фантомное чтение и ниже).
+> * Устойчивость - Другими словами, если пользователь получил подтверждение от системы, что транзакция выполнена, он может быть уверен, что сделанные им изменения не будут отменены из-за какого-либо сбоя.
 
 
   ***level 2:***
@@ -401,7 +435,7 @@ ___
 
   ***level 3 (required):***
   
-  - GGive a practical example of a transaction
+  - Give a practical example of a transaction
 
 
   ***level 4:***
