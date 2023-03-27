@@ -466,4 +466,114 @@ ___
 
 ___
 
+# 3 SQL
+___
 
+## 3.1 SQL.Data types (required level 3)
+
+  ***level 1:***  
+  
+  -
+  
+  ***level 2:***
+  
+  -  базовые типы данных(строки, числа)
+
+
+  ***level 3 (required):***
+  
+  - blob
+
+  ***level 4:***
+  
+  - date, datitime, timestamp
+
+
+___
+
+## 3.2 SQL operators, functions (required level 3)
+
+  ***level 1:***  
+  
+  -
+  
+  ***level 2:***
+  
+  -  arithmetic, bitwise, comparison operators
+
+
+  ***level 3 (required):***
+  
+  - compound, logical operators
+
+  ***level 4:***
+  
+  - functions
+
+
+___
+
+## 3.3 SQL Joins understanding, INNER, LEFT, RIGHT, FULL (required level 3)
+
+  ***level 1:***  
+  
+  -
+  
+  ***level 2:***
+  
+  -  знание видов JOIN'ов
+
+
+  ***level 3 (required):***
+  
+  - отличительные особенности JOIN'ов между собой
+
+  ***level 4:***
+  
+  - примеры JOIN'ов на практике
+
+
+___
+
+## 3.4 SQL Ordering selected results - ORDER BY (required level 3)
+
+  ***level 1:***  
+  
+  - виды сортировок
+  
+  ***level 2:***
+  
+  -  сортировки по нескольким полям
+
+
+  ***level 3 (required):***
+  
+  - практические примеры с сортировками
+
+  ***level 4:***
+  
+  - примеры JOIN'ов на практике
+
+
+___
+
+## 3.5 SQL NoSQL BD (Mongo, DynamoDB) (required level 2)
+
+  ***level 1:***  
+  
+  - особенности нереляционных БД
+  
+  ***level 2:***
+  
+  -  области применения нереляционных Бд
+
+
+  ***level 3 (required):***
+  
+  - примеры запросов к БД
+
+  ***level 4:***
+  
+  - преимущества и недостатки NoSQL в отличие от SQL
+
+___
