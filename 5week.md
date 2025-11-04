@@ -163,12 +163,16 @@
    - Шаблонный подход (template driven forms);
    - Реактивный подход (Reactive forms). Через controls - это экземпляры класса FornControl, FormGroup, FormArray, FormBuilder;
 
-    Различия между template-driven forms и Reactive forms:  
-      - *Reactive forms* - sync, *template-driven forms* - async; 
-      - *Reactive forms* - управление происходит в класса модели (component). Богатая API. *template-driven form* - управление происходит в шаблоне (в html)          (фактически 2-way binding ( [(ngModel)]='var'));
-      - *Reactive forms*- для сложных форм. *template-driven form* - для протсоых форм;
-      - *Reactive forms* - гибкость настроек;
-      - 
+   Различия между template-driven forms и Reactive forms:
+   - **Reactive forms** - sync;
+   - *template-driven forms* - async;
+   - *Reactive forms* - управление происходит в класса модели (component). Богатая API.
+   - *template-driven form* - управление происходит в шаблоне (в html)(фактически 2-way binding ( [(ngModel)]='var'));
+   - *Reactive forms* - для сложных форм.
+   - *template-driven form* - для протсоых форм;
+   - *Reactive forms* - гибкость настроек;
+
+  
 - What is FormControl, FormGroup; - это экземпляры класса FornControl, FormGroup, FormArray, FormBuilder;
 - How do we link form elements in a template and a component;
 
@@ -178,13 +182,13 @@
 - FormArray; - объединяет значения каждого дочернего элемента FormControl в массив
 - What's the difference between a dirty, touched, and pristine form element;
   заимодействие с валидаторами состояния INPUT (Статусы состояния(Кдассы в html в браузере)). Валидаторы имеют следующие состояния:
-    pristine - когда еще ничего не вводили;
-    dirty - когда что то ввели;
-    touched - когда было переведено в focus;
-    untouched - когда не было переведено в focus, не тронуто;
-    valid - когда пройдена валидация;
-    invalid - когда не пройдена валидация;
-    pending - когда ждем ответа от валидатора
+     - pristine - когда еще ничего не вводили;
+     - dirty - когда что то ввели;
+     - touched - когда было переведено в focus;
+     - untouched - когда не было переведено в focus, не тронуто;
+     - valid - когда пройдена валидация;
+     - invalid - когда не пройдена валидация;
+     - pending - когда ждем ответа от валидатора
     
  - How does the form validation work;
 > Валидатор (validator) - это функция которая возращает функцию (ValidatorFn) которая получает control и синхронно возвращает карту ошибок проверки, если они есть, в >противном случае — null.
@@ -223,11 +227,12 @@
 
 **level 1:**  
 
-- Initialising router;
-    1.Создаем компоненты страницы приложения (страницы или routes);     
-    2. создаем routing модуль, который содержит @NgModule декоратор со свойствами imports и exports. И в imports передаем пути для строниц (routes). routes - это массив объектов [{},{},{}] со свойствами path: 'путь до строницы', component: имя класса отвечающего за компонент, (это обязательные), и по требованию свойство children: с массивом обхектов (дочерних страниц). Вместо component может идти свойство redirectTo c указанием страницы (route) куда необходимо перенаправить в случае неверног гзадание ссылки (ошибка в пути).    
-    3. Регестрируем созданный модуль с app.module.ts в imports [];    
-    4. В app.component.html => прописывается тег router-outlet
+- Initialising router:
+  
+   1.Создаем компоненты страницы приложения (страницы или routes);     
+   2. создаем routing модуль, который содержит @NgModule декоратор со свойствами imports и exports. И в imports передаем пути для строниц (routes). routes - это массив объектов [{},{},{}] со свойствами path: 'путь до строницы', component: имя класса отвечающего за компонент, (это обязательные), и по требованию свойство children: с массивом обхектов (дочерних страниц). Вместо component может идти свойство redirectTo c указанием страницы (route) куда необходимо перенаправить в случае неверног гзадание ссылки (ошибка в пути).    
+   3. Регестрируем созданный модуль с app.module.ts в imports [];    
+   4. В app.component.html => прописывается тег router-outlet
   ```
   const routes: Routes = [
   {path: '', component: HomeComponent},
